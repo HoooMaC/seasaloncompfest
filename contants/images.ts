@@ -25,33 +25,33 @@ export const aboutImages: ImageProps[] = [
 
 export const galleryImage: ImageProps[] = [
   {
-    title: 'Facial Treatments',
+    title: 'Vibrant Nail Color Collection',
     image: '/images/A nail polish display in a salon, featuring a variety of nail polish bottles arranged neatly on geometric wooden shelves.webp',
-    description: 'Get the latest styling trends and beauty treatments at Sea Salon for a fresh look.',
+    description: 'Explore our extensive range of nail polish colors that suit every mood and occasion. From classic reds to trendy metallics, our collection ensures your nails always look stunning',
   },
   {
-    title: 'Facial Treatments',
+    title: 'Professional Hairdressing Essentials',
     image: '/images/collection of hairdressing tools arranged neatly on a wooden surface. The tools include scissors, combs, and spray bottles, placed on a white towel.webp',
-    description: 'Get the latest styling trends and beauty treatments at Sea Salon for a fresh look.',
+    description: 'Our salon is equipped with top-of-the-line hairdressing tools and products to ensure you receive the best care. Our expert stylists use these high-quality essentials to give you the perfect look',
   },
   {
-    title: 'Facial Treatments',
+    title: 'Elegant Hair Styling Stations',
     image: '/images/salon workstation with hairdressing tools.webp',
-    description: 'Get the latest styling trends and beauty treatments at Sea Salon for a fresh look.',
+    description: 'Enjoy a luxurious hair styling experience at our elegantly designed stations. Each station is equipped with modern amenities to provide you with comfort and style',
   },
   {
-    title: 'Facial Treatments',
+    title: 'Premium Makeup Palette Selections',
     image: '/images/colorful eyeshadow palette.webp',
-    description: 'Get the latest styling trends and beauty treatments at Sea Salon for a fresh look.',
+    description: 'Discover our exclusive selection of makeup palettes featuring a variety of shades and finishes. Our professional makeup artists are ready to help you find the perfect look for any event',
   },
   {
-    title: 'Facial Treatments',
+    title: 'Modern and Chic Salon Interior',
     image: '/images/A hair salon with modern and comfortable styling chairs in front of a large mirror..webp',
-    description: 'Get the latest styling trends and beauty treatments at Sea Salon for a fresh look.',
+    description: 'Step into our chic and contemporary salon interior, designed to provide a relaxing and stylish atmosphere. Our spacious and well-appointed salon ensures a delightful experience from start to finish',
   },
   {
-    title: 'Facial Treatments',
+    title: 'Luxurious Salon Lounge Experience',
     image: '/images/A modern hair salon.webp',
-    description: 'Get the latest styling trends and beauty treatments at Sea Salon for a fresh look.',
+    description: 'Relax in our luxurious salon lounge, where comfort meets elegance. Enjoy complimentary refreshments and a serene environment as you prepare for your beauty treatments',
   },
 ];

@@ -19,16 +19,16 @@ const Navbar = () => {
           <li className={styles.list_item}>
             Home
           </li>
-          <li className='text-black cursor-pointer hover:font-medium hover:text-primary'>
+          <li className={styles.list_item}>
             About
           </li>
-          <li className='text-black cursor-pointer hover:font-medium hover:text-primary'>
+          <li className={styles.list_item}>
             Services
           </li>
-          <li className='text-black cursor-pointer hover:font-medium hover:text-primary'>
+          <li className={styles.list_item}>
             Contact
           </li>
-          <li className='text-black cursor-pointer hover:font-medium hover:text-primary'>
+          <li className={styles.list_item}>
             Explore More
           </li>
         </ul>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { aboutImages, galleryImage } from '@/contants/images';
 import { Fragment } from 'react';
 import { images } from 'next/dist/build/webpack/config/blocks/images';
+import Gallery from '@/sections/Gallery';
 
 const heroImage = '/images/view of various makeup brushes and beauty tools arranged neatly on a salon countertop.jpg';
 
@@ -36,7 +37,7 @@ export default function Home() {
 
       <section
         id="about"
-        className=" min-h-screen bg-primary text-black py-40">
+        className=" bg-white text-black py-40">
         <div className="container mx-auto">
           <h2 className="text-5xl font-medium font-outfit text-center">Haircuts
             Manicure Facial</h2>
@@ -45,16 +46,16 @@ export default function Home() {
           <div className="flex justify-between  mt-10 mx-auto w-full gap-8">
             {aboutImages.map((aboutImage, index) => {
               return (
-                <div key={index} className="relative]">
+                <div key={index} className="relative">
                   <Image
                     src={aboutImage.image}
                     alt={`Image ${index}`}
                     width={900}
                     height={400}
-                    className="w-full rounded-2xl aspect-square object-cover"
+                    className="w-full rounded-2xl shadow-2xl aspect-square object-cover"
                   />
                   <div
-                    className="w-[90%] relative left-1/2 p-8 grid place-content-center -translate-x-1/2 -translate-y-1/3 aspect-[4/1] bg-white text-center">
+                    className="w-[90%] relative left-1/2 p-8 shadow-lg grid place-content-center -translate-x-1/2 -translate-y-1/3 aspect-[4/1] bg-white text-center">
                     <h3 className="font-medium text-2xl">
                       {aboutImage.title}
                     </h3>
@@ -68,36 +69,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section
-        id="gallery"
-        className=" min-h-screen min mx-auto bg-white text-black py-40">
-        <div className="container mx-auto">
-          <h2 className="text-5xl font-medium font-outfit text-center">Our
-            Gallery</h2>
-          <div className="grid grid-cols-3 w-full mt-12">
-            {galleryImage.map((image, index) => {
-              return (
-                <div key={index} className='grid place-content-center'>
-                  <div
-                    className="w-[400px] aspect-square bg-blue-400 rounded-xl overflow-hidden">
-                    <Image
-                      src={image.image}
-                      alt={image.description}
-                      width={400}
-                      height={400}
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-                  <h4
-                    className="text-xl font-medium mt-2 text-black block text-center z-30">{image.title}</h4>
-                </div>
-              );
-            })}
-          </div>
-        </div>
 
-      </section>
-
+      <Gallery />
 
     </main>
   );
