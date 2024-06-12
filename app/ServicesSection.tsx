@@ -6,12 +6,15 @@ import Image from 'next/image';
 const ServicesSection = () => {
   return (
     <section id='services' className='bg-secondary py-40 text-black'>
-      <div className='container'>
+      <div className='container px-8'>
         <SectionTitle color='text-text'>Our Services</SectionTitle>
-        <div className='mx-auto mt-10 flex w-full justify-between gap-8'>
+        <div className='mx-auto mt-10 flex flex-wrap justify-between gap-8 lg:w-full xl:flex-nowrap'>
           {aboutImages.map((aboutImage, index) => {
             return (
-              <div key={index} className='relative'>
+              <div
+                key={index}
+                className='lg: relative mx-auto w-8/12 lg:w-2/5 xl:w-full'
+              >
                 <Image
                   src={aboutImage.image}
                   alt={`Image ${index}`}

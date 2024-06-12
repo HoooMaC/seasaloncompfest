@@ -7,7 +7,7 @@ import Link from 'next/link';
 const Navbar = () => {
   return (
     <nav className='fixed top-0 z-50 w-screen border-b-2 border-b-secondary bg-white'>
-      <div className='container flex items-center justify-between'>
+      <div className='container flex items-center justify-between p-4 lg:p-0'>
         <Image
           src='/images/logo sea.png'
           alt='sea salon logo'

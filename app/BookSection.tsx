@@ -4,14 +4,17 @@ import Image from 'next/image';
 
 const BookSection = () => {
   return (
-    <section id='book' className='bg-secondary py-40 text-black'>
+    <section
+      id='book'
+      className='overflow-hidden bg-secondary py-40 text-black'
+    >
       <div className='container'>
-        <div className='relative flex gap-8'>
-          <div className='relative top-10 flex basis-3/5 flex-col justify-center gap-4'>
-            <h2 className='font-outfit text-5xl font-medium text-text'>
+        <div className='relative mx-auto flex flex-col gap-8 lg:flex-row lg:p-8'>
+          <div className='relative top-10 flex flex-col justify-center gap-4 p-4 lg:basis-3/5 lg:p-0'>
+            <h2 className='text-center font-outfit text-5xl font-medium text-text lg:text-left'>
               What are you waiting for
             </h2>
-            <p className='text-xl'>
+            <p className='text-center text-xl lg:text-left'>
               Transform your look with the expertise of our professional
               stylists at <b className='text-accent'>SEA SALON</b>. Our team is
               committed to giving you the perfect style, using only the finest
@@ -22,17 +25,19 @@ const BookSection = () => {
               {/*its best. Our appointments fill up fast, so secure your spot*/}
               {/*today and let us elevate your style to the next level.*/}
             </p>
-            <SecondaryButton className='bg-accent'>Book Now</SecondaryButton>
+            <SecondaryButton className='mx-auto bg-accent lg:mx-[unset]'>
+              Book Now
+            </SecondaryButton>
           </div>
-          <div className='relative basis-2/5'>
+          <div className='relative mx-auto lg:basis-2/5'>
             {/* The size should follow the image */}
-            <div className='absolute left-1/2 top-10 size-[243px] -translate-x-1/2 md:size-[294px] lg:size-[400px]'>
+            <div className='absolute left-1/2 top-10 hidden size-[243px] -translate-x-1/2 p-4 md:size-[294px] lg:block lg:size-[384px] lg:w-full xl:size-[400px] xl:size-full'>
               <div className='relative bottom-10 left-10 size-full bg-accent'></div>
             </div>
             <Image
               src='/images/A modern hair salon reservation desk area - square.jpg'
               alt='A modern hair salon reservation desk area'
-              className='relative left-1/2 top-10 -translate-x-1/2'
+              className='relative left-1/2 top-10 -translate-x-1/2 lg:p-4 xl:w-full'
               width={400}
               height={400}
             />

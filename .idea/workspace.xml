@@ -5,40 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/AboutSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/BookSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GallerySection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/HeroSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ServicesSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Buttons.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Footer.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SectionTitle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contants/reviews.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Svgs/ChevronLeft.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Svgs/ChevronRight.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Svgs/RightArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/A beauty salon with the most complete facilities. The salon should showcase a variety of premium treatment rooms, including areas for facials, massage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/A beauty salon with the most complete facilities. The salon should showcase a variety of premium treatment rooms, including areas for facials, massage.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/A luxurious beauty salon offering premium treatments and services. The interior should feature elegant decor with plush seating, stylish lighting, and.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/A modern hair salon building front, designed in a sleek, contemporary style. The facade should feature large glass windows, minimalist lines, and a st.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/A modern hair salon reservation desk area - Copy.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/A modern hair salon reservation desk area - square.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/A modern hair salon with a sleek design, featuring a female stylist cutting a female customer's hair. The customer is seated in a salon chair in front.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/DALL·E 2024-06-12 17.27.10 - A luxurious beauty salon offering premium treatments and services. The interior should feature elegant decor with plush seating, stylish lighting, and.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/cn.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AboutSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/AboutSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/BookSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/BookSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/GallerySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/GallerySection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/HeroSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ServicesSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ServicesSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/GalleryItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/GalleryItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contants/images.ts" beforeDir="false" afterPath="$PROJECT_DIR$/contants/images.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/Gallery.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +77,7 @@
       <workItem from="1718031923210" duration="634000" />
       <workItem from="1718032590517" duration="8313000" />
       <workItem from="1718060040602" duration="5586000" />
-      <workItem from="1718175142252" duration="13059000" />
+      <workItem from="1718175142252" duration="16662000" />
     </task>
     <servers />
   </component>
