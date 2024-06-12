@@ -13,17 +13,17 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-    <body className={`${inter.className} ${outfit.variable}`}>
-    <Navbar />
-    {children}
-    <Footer />
-    </body>
+    <html lang='en'>
+      <body className={`${inter.className} ${outfit.variable}`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

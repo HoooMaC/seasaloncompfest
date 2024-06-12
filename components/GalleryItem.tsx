@@ -4,34 +4,36 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 interface ImageProps {
-  image: string,
-  title: string,
-  description: string
+  image: string;
+  title: string;
+  description: string;
 }
-
 
 const GalleryItem = ({ image, title, description }: ImageProps) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="col-span-1 w-full"
-         onMouseEnter={() => setIsHovered(true)}
-         onMouseLeave={() => setIsHovered(false)}>
-      <div
-        className="relative w-[400px] aspect-square bg-primary-100 cursor-none rounded-xl overflow-hidden">
+    <div
+      className='col-span-1 flex w-full flex-col items-center justify-center'
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className='relative aspect-square w-[400px] cursor-none overflow-hidden rounded-xl bg-primary-100'>
         <Image
           src={image}
           alt={description}
           width={400}
           height={400}
-          className={`object-cover w-full h-full ${isHovered ? 'opacity-30' : 'opacity-100'} `}
+          className={`h-full w-full object-cover ${isHovered ? 'opacity-30' : 'opacity-100'} `}
         />
         <div
-          className={`absolute inset-0 transition-opacity cursor-none  text-center text-background text-2xl  place-content-center p-4  grid ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+          className={`absolute inset-0 grid cursor-none place-content-center p-4 text-center text-2xl text-background transition-opacity ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+        >
           {description}
         </div>
       </div>
-      <h4
-        className="text-xl font-medium my-4 text-bold block text-background text-center z-30">{title}</h4>
+      <h4 className='text-bold z-30 my-4 block text-center text-xl font-medium text-background'>
+        {title}
+      </h4>
     </div>
   );
 };

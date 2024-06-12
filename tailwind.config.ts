@@ -7,9 +7,13 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      // padding: '1rem',
+    },
     extend: {
       colors: {
-        'text': {
+        text: {
           DEFAULT: '#212121',
           50: '#0d0d0d',
           100: '#1a1a1a',
@@ -23,7 +27,7 @@ const config: Config = {
           900: '#e6e6e6',
           950: '#f2f2f2',
         },
-        'background': {
+        background: {
           DEFAULT: '#F5F5F5',
           50: '#0d0d0d',
           100: '#1a1a1a',
@@ -37,7 +41,7 @@ const config: Config = {
           900: '#e6e6e6',
           950: '#f2f2f2',
         },
-        'primary': {
+        primary: {
           DEFAULT: '#5D4037',
           50: '#100b09',
           100: '#201613',
@@ -51,7 +55,7 @@ const config: Config = {
           900: '#ece2df',
           950: '#f6f0ef',
         },
-        'secondary': {
+        secondary: {
           DEFAULT: '#c6b2a0',
           50: '#100d0a',
           100: '#201913',
@@ -65,7 +69,7 @@ const config: Config = {
           900: '#ece5df',
           950: '#f5f2ef',
         },
-        'accent': {
+        accent: {
           DEFAULT: '#FFCC80',
           50: '#1a0f00',
           100: '#331f00',
@@ -84,7 +88,6 @@ const config: Config = {
       fontFamily: {
         outfit: ['var(--font-outfit)'],
       },
-
     },
   },
   plugins: [],

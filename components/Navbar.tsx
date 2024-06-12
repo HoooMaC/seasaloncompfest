@@ -2,11 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 
 import styles from '@/components/Navbar.module.css';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className='fixed top-0 z-50 bg-white w-screen border-b-2 border-b-secondary px-10'>
-      <div className='container mx-auto flex items-center justify-between'>
+    <nav className='fixed top-0 z-50 w-screen border-b-2 border-b-secondary bg-white'>
+      <div className='container flex items-center justify-between'>
         <Image
           src='/images/logo sea.png'
           alt='sea salon logo'
@@ -17,19 +18,19 @@ const Navbar = () => {
         />
         <ul className='flex gap-4'>
           <li className={styles.list_item}>
-            Home
+            <Link href='#hero'>Home</Link>
           </li>
           <li className={styles.list_item}>
-            About
+            <Link href='#about'>About</Link>
           </li>
           <li className={styles.list_item}>
-            Services
+            <Link href='#services'>Services</Link>
           </li>
           <li className={styles.list_item}>
-            Contact
+            <Link href='#gallery'>Gallery</Link>
           </li>
           <li className={styles.list_item}>
-            Explore More
+            <Link href='#book'>Book</Link>
           </li>
         </ul>
       </div>
