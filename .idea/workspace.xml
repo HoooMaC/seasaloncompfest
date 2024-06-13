@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AboutSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/AboutSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/BookSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/BookSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GallerySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/GallerySection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/HeroSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ServicesSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ServicesSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/GalleryItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/GalleryItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
-    </list>
+    <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +69,7 @@
       <workItem from="1718060040602" duration="5586000" />
       <workItem from="1718175142252" duration="18527000" />
       <workItem from="1718252005584" duration="3455000" />
-      <workItem from="1718284353446" duration="6269000" />
+      <workItem from="1718284353446" duration="6942000" />
     </task>
     <servers />
   </component>
