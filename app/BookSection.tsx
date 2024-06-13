@@ -1,6 +1,7 @@
 import React from 'react';
 import { SecondaryButton } from '@/components/Buttons';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 const BookSection = () => {
   return (
@@ -25,9 +26,12 @@ const BookSection = () => {
               {/*its best. Our appointments fill up fast, so secure your spot*/}
               {/*today and let us elevate your style to the next level.*/}
             </p>
-            <SecondaryButton className='mx-auto bg-accent lg:mx-[unset]'>
+            <Button
+              variant='default'
+              className='mx-auto w-1/5 min-w-[100px] lg:mx-0'
+            >
               Book Now
-            </SecondaryButton>
+            </Button>
           </div>
           <div className='relative mx-auto lg:basis-2/5'>
             {/* The size should follow the image */}

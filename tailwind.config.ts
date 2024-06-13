@@ -1,48 +1,35 @@
 import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
-const config: Config = {
+const config = {
+  darkMode: ['class'],
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
+  prefix: '',
   theme: {
     container: {
       center: true,
-      padding: '16px',
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+      },
       colors: {
-        text: {
-          DEFAULT: '#212121',
-          50: '#0d0d0d',
-          100: '#1a1a1a',
-          200: '#333333',
-          300: '#4d4d4d',
-          400: '#666666',
-          500: '#808080',
-          600: '#999999',
-          700: '#b3b3b3',
-          800: '#cccccc',
-          900: '#e6e6e6',
-          950: '#f2f2f2',
-        },
-        background: {
-          DEFAULT: '#F5F5F5',
-          50: '#0d0d0d',
-          100: '#1a1a1a',
-          200: '#333333',
-          300: '#4d4d4d',
-          400: '#666666',
-          500: '#808080',
-          600: '#999999',
-          700: '#b3b3b3',
-          800: '#cccccc',
-          900: '#e6e6e6',
-          950: '#f2f2f2',
-        },
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#5D4037',
+          DEFAULT: 'hsl(var(--primary))',
           50: '#100b09',
           100: '#201613',
           200: '#402c26',
@@ -54,9 +41,10 @@ const config: Config = {
           800: '#d9c5bf',
           900: '#ece2df',
           950: '#f6f0ef',
+          foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
-          DEFAULT: '#c6b2a0',
+          DEFAULT: 'hsl(var(--secondary))',
           50: '#100d0a',
           100: '#201913',
           200: '#403226',
@@ -68,9 +56,18 @@ const config: Config = {
           800: '#d9cbbf',
           900: '#ece5df',
           950: '#f5f2ef',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
-          DEFAULT: '#FFCC80',
+          DEFAULT: 'hsl(var(--accent))',
           50: '#1a0f00',
           100: '#331f00',
           200: '#663d00',
@@ -82,14 +79,39 @@ const config: Config = {
           800: '#ffd699',
           900: '#ffebcc',
           950: '#fff5e5',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
         },
       },
-
-      fontFamily: {
-        outfit: ['var(--font-outfit)'],
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
   },
-  plugins: [],
-};
+  plugins: [require('tailwindcss-animate')],
+} satisfies Config;
+
 export default config;
