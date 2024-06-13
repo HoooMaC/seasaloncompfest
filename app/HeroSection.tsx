@@ -19,7 +19,7 @@ const HeroSection = () => {
           height={1080}
           className='absolute bottom-0 block h-full w-full object-cover object-left-bottom opacity-50'
         />
-        <div className='container relative top-1/2 z-10 mx-auto flex w-full -translate-y-1/2 flex-col gap-2 p-4 lg:p-8'>
+        <div className='container relative top-1/2 z-10 mx-auto flex w-full -translate-y-1/2 flex-col gap-2 p-4'>
           <h1 className='font-outfit text-8xl text-background'>Sea Salon</h1>
           <p className='text-3xl text-background'>
             Experience Beauty and Elegance Redefined

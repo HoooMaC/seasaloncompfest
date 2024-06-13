@@ -9,8 +9,8 @@ const BookSection = () => {
       className='overflow-hidden bg-secondary py-40 text-black'
     >
       <div className='container'>
-        <div className='relative mx-auto flex flex-col gap-8 lg:flex-row lg:p-8'>
-          <div className='relative top-10 flex flex-col justify-center gap-4 p-4 lg:basis-3/5 lg:p-0'>
+        <div className='relative mx-auto flex flex-col gap-8 lg:flex-row'>
+          <div className='relative top-10 flex flex-col justify-center gap-4 lg:basis-3/5'>
             <h2 className='text-center font-outfit text-5xl font-medium text-text lg:text-left'>
               What are you waiting for
             </h2>
@@ -32,12 +32,12 @@ const BookSection = () => {
           <div className='relative mx-auto lg:basis-2/5'>
             {/* The size should follow the image */}
             <div className='absolute left-1/2 top-10 hidden size-[243px] -translate-x-1/2 p-4 md:size-[294px] lg:block lg:size-[384px] lg:w-full xl:size-[400px] xl:size-full'>
-              <div className='relative bottom-10 left-10 size-full bg-accent'></div>
+              <div className='relative bottom-10 left-10 size-full rounded-2xl bg-accent'></div>
             </div>
             <Image
               src='/images/A modern hair salon reservation desk area - square.jpg'
               alt='A modern hair salon reservation desk area'
-              className='relative left-1/2 top-10 -translate-x-1/2 lg:p-4 xl:w-full'
+              className='relative left-1/2 top-10 -translate-x-1/2 rounded-2xl shadow-2xl xl:w-full'
               width={400}
               height={400}
             />

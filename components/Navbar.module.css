@@ -1,3 +1,6 @@
 .list_item {
   @apply cursor-pointer text-black hover:font-medium hover:text-secondary;
 }
+.bars_element {
+  @apply absolute h-[6px] bg-secondary rounded-full transition-all  origin-center w-3/4;
+}

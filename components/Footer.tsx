@@ -5,12 +5,12 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='bg-primary-100 py-10'>
+    <footer className='bg-primary-100 py-4 md:py-10'>
       <div className='container'>
         <Image
           src='/images/logo sea.png'
           alt='sea salon logo'
-          className='mx-auto my-8 size-40'
+          className='mx-auto size-40'
           width={200}
           height={200}
           // layout='responsive'
