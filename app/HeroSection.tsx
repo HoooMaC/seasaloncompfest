@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { SecondaryButton } from '@/components/Buttons';
+import { Button } from '@/components/ui/button';
 
 const heroImage =
   '/images/view of various makeup brushes and beauty tools arranged neatly on a salon countertop.jpg';
@@ -24,7 +25,10 @@ const HeroSection = () => {
           <p className='text-3xl text-background'>
             Experience Beauty and Elegance Redefined
           </p>
-          <SecondaryButton>Explore</SecondaryButton>
+          {/*<SecondaryButton>Explore</SecondaryButton>*/}
+          <Button variant='secondary' className='w-1/5 min-w-[100px]'>
+            Button
+          </Button>
         </div>
       </div>
     </section>

@@ -10,7 +10,7 @@ interface ImageProps {
 const GalleryItem = ({ image, title, description }: ImageProps) => {
   return (
     <div className='col-span-1 flex w-full flex-col items-center justify-center'>
-      <div className='group relative aspect-square w-[400px] cursor-none overflow-hidden rounded-xl bg-primary-100'>
+      <div className='group relative aspect-square w-full max-w-[400px] cursor-none overflow-hidden rounded-xl bg-primary-100 sm:w-[400px]'>
         <Image
           src={image}
           alt={description}
@@ -24,7 +24,7 @@ const GalleryItem = ({ image, title, description }: ImageProps) => {
           {description}
         </div>
       </div>
-      <h4 className='text-bold z-30 my-4 block text-center text-xl font-medium text-text'>
+      <h4 className='text-bold text-text z-30 my-4 block text-center text-xl font-medium'>
         {title}
       </h4>
     </div>

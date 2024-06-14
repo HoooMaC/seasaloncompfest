@@ -1,13 +1,17 @@
+import { cn } from '@/lib/utils';
+
 interface SectionTitleProps {
-  size?: string;
-  color?: string;
+  className?: string;
   children: React.ReactNode;
 }
 
-const SectionTitle = ({ size, color, children }: SectionTitleProps) => {
+const SectionTitle = ({ className, children }: SectionTitleProps) => {
   return (
     <h2
-      className={`mb-12 text-center font-outfit font-medium ${size || 'text-5xl'} ${color || 'text-text'} `}
+      className={cn(
+        `font-outfit text-text mb-12 text-center text-5xl font-medium`,
+        className
+      )}
     >
       {children}
     </h2>

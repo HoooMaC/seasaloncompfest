@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/FormStar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ReviewCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/icons/Star.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AboutSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/AboutSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/BookSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/BookSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GallerySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/GallerySection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/HeroSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ServicesSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ServicesSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ReviewsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ReviewsSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/GalleryItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/GalleryItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SectionTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SectionTitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "shadeCn",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,6 +61,7 @@
     "prettierjs.PrettierConfiguration.Package": "C:\\Code\\Web\\seasaloncompfest\\node_modules\\prettier",
     "settings.editor.selected.configurable": "preferences.editor",
     "ts.external.directory.path": "C:\\Code\\Web\\seasaloncompfest\\node_modules\\typescript\\lib",
+    "ts.rename.search.for.dynamic.occurrences": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -84,7 +85,8 @@
       <workItem from="1718060040602" duration="5586000" />
       <workItem from="1718175142252" duration="18527000" />
       <workItem from="1718252005584" duration="3455000" />
-      <workItem from="1718284353446" duration="6269000" />
+      <workItem from="1718284353446" duration="12816000" />
+      <workItem from="1718343872850" duration="7434000" />
     </task>
     <servers />
   </component>
