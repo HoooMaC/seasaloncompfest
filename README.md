@@ -1,5 +1,3 @@
-markdown
-Copy code
 # SEA Salon
 
 Introducing SEA Salon, a rising star in the salon industry known for their outstanding services and excellent reviews. With a rapidly growing clientele and a stellar reputation, SEA Salon is your premier destination for all your beauty needs. To handle the new customers, the SEA Salon management team has decided to develop a new SEA Salon Application. This app lets users easily browse available services, select their preferred stylist, and book appointments quickly. With a user-friendly interface and seamless booking integration, making a reservation with a top stylist has never been easier!

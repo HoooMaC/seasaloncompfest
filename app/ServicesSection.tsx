@@ -7,7 +7,7 @@ const ServicesSection = () => {
   return (
     <section id='services' className='bg-secondary py-40 text-black'>
       <div className='container'>
-        <SectionTitle color='text-text'>Our Services</SectionTitle>
+        <SectionTitle className='text-text'>Our Services</SectionTitle>
         <div className='mt-10 flex flex-wrap justify-between gap-y-40 xl:flex-nowrap'>
           {aboutImages.map((aboutImage, index) => {
             return (
