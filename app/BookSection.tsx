@@ -2,6 +2,7 @@ import React from 'react';
 import { SecondaryButton } from '@/components/Buttons';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const BookSection = () => {
   return (
@@ -12,7 +13,7 @@ const BookSection = () => {
       <div className='container'>
         <div className='relative mx-auto flex flex-col gap-8 lg:flex-row'>
           <div className='relative top-10 flex flex-col justify-center gap-4 lg:basis-3/5'>
-            <h2 className='text-center font-outfit text-5xl font-medium text-text lg:text-left'>
+            <h2 className='font-outfit text-text text-center text-5xl font-medium lg:text-left'>
               What are you waiting for
             </h2>
             <p className='text-center text-xl lg:text-left'>
@@ -26,12 +27,13 @@ const BookSection = () => {
               {/*its best. Our appointments fill up fast, so secure your spot*/}
               {/*today and let us elevate your style to the next level.*/}
             </p>
-            <Button
-              variant='default'
-              className='mx-auto w-1/5 min-w-[100px] lg:mx-0'
+            <Link
+              // variant='default'
+              className='inline-flex w-fit min-w-[100px] items-center justify-center whitespace-nowrap rounded-md bg-primary p-4 text-sm font-medium text-background ring-offset-background'
+              href='/book'
             >
               Book Now
-            </Button>
+            </Link>
           </div>
           <div className='relative mx-auto lg:basis-2/5'>
             {/* The size should follow the image */}
