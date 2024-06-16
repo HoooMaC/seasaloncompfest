@@ -8,30 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/NewReservationAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ReservationList/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/book/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/review/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/book/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NewReviewDialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/RenderAllReviews.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/icons/Message.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/icons/PenIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/FormError.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/FormSuccess.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contants/availableTimes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dbprisma.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schemas/BookingSchema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schemas/ReviewSchema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/book/ReservationForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/TextGenerate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/BookSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/BookSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ReviewsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ReviewsSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ReservationList/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ReservationList/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/book/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/book/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +91,9 @@
       <workItem from="1718284353446" duration="12816000" />
       <workItem from="1718343872850" duration="28193000" />
       <workItem from="1718433051051" duration="2813000" />
-      <workItem from="1718436239838" duration="7684000" />
+      <workItem from="1718436239838" duration="11044000" />
+      <workItem from="1718535757740" duration="2317000" />
+      <workItem from="1718546960792" duration="1654000" />
     </task>
     <servers />
   </component>

@@ -5,18 +5,23 @@ import HeroSection from '@/app/HeroSection';
 import BookSection from '@/app/BookSection';
 import ReviewsSection from '@/app/ReviewsSection';
 import NewReviewDialog from '@/components/NewReviewDialog';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main>
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <GallerySection />
-      <ReviewsSection />
-
-      <NewReviewDialog />
-      <BookSection />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <GallerySection />
+        <ReviewsSection />
+        <NewReviewDialog />
+        <BookSection />
+      </main>
+      <Footer />
+    </>
   );
 }

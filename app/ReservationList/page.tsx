@@ -1,4 +1,3 @@
-import React from 'react';
 import { dbPrisma } from '@/lib/dbprisma';
 
 const ShowAllReservation = async () => {
