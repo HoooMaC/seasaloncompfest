@@ -10,7 +10,8 @@ export const newReservation = async (
 ) => {
   //   -----------------------------------
   const validatedFields = BookingSchema.safeParse(values);
-  if (!validatedFields.success) return { error: 'invalid Fields' };
+  if (!validatedFields.success)
+    return { response: { error: 'invalid Fields' } };
 
   const { name, phone, type, date, time } = validatedFields.data;
   const stringDate = date.toDateString();
