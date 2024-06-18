@@ -8,28 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/actions/CreateNewAccount.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/LoginAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/RegisterAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/SignOutAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(protected)/userDashboard/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/login/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/register/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/Reservation.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/User.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schemas/AuthSchema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/User/ProfileSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/User/Sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/User/TransactionHistorySection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/LoginAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/LoginAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(protected)/userDashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(protected)/userDashboard/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,23 +55,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Code/Web/seasaloncompfest/app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Code\\Web\\seasaloncompfest\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Code\\Web\\seasaloncompfest\\node_modules\\typescript\\lib",
-    "ts.rename.search.for.dynamic.occurrences": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Code/Web/seasaloncompfest/app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Code\\Web\\seasaloncompfest\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Code\\Web\\seasaloncompfest\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.rename.search.for.dynamic.occurrences&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Code\Web\seasaloncompfest\app" />
@@ -116,7 +104,9 @@
       <workItem from="1718535757740" duration="2317000" />
       <workItem from="1718546960792" duration="1978000" />
       <workItem from="1718601949702" duration="5113000" />
-      <workItem from="1718615938906" duration="21642000" />
+      <workItem from="1718615938906" duration="25147000" />
+      <workItem from="1718709744950" duration="5414000" />
+      <workItem from="1718717025018" duration="1200000" />
     </task>
     <servers />
   </component>

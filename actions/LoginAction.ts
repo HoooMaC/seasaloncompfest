@@ -18,7 +18,7 @@ export const LoginAction = async (values: zod.infer<typeof LoginSchema>) => {
     await signIn('credentials', {
       email: email,
       password: password,
-      redirectTo: DEFAULT_LOGIN_REDIRECT,
+      redirectTo: '/userDashboard',
     });
   } catch (error) {
     if (error instanceof AuthError) {

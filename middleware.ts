@@ -18,8 +18,8 @@ export default auth(req => {
   const { pathname } = nextUrl;
 
   // FOR DEBUGGING
-  console.log(`Login: ${isLoggedIn}`);
-  console.log(`ROUTE PATH: ${pathname}`);
+  // console.log(`Login: ${isLoggedIn}`);
+  // console.log(`ROUTE PATH: ${pathname}`);
 
   const isApiAuthRoute = pathname.startsWith(apiAuthPrefix);
   const isPublicRoute = publicRoutes.includes(pathname);

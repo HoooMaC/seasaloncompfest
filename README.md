@@ -31,18 +31,50 @@ To run the project on your local machine, follow these steps:
    ```bash
    git clone [repository_url]
 
+
 2. **Install Dependencies**:
    ```bash
    npm install
+   
+3. **Make the Environment with the Template**:
+   ```bash
+   cp .env.example .env
+   ```
+   
+   or in the windows use
 
-3. **Run the development server**:
+   ```bash
+   copy .env.example .env
+   ```
+
+4. **Setting up all the Environment Variable**:
+   
+   You can see all the list of environment variable needed for this project 
+   in the next section
+
+5. **Run the development server**:
    ```bash
    npm run dev
 
-4. **Build the project**:
+6. **Build the project**:
    ```bash
    npm run build
    
+
+## Environment Variables
+
+**AuthSecret**
+
+   Used for security you need to generate secret random key
+
+   openssl rand32
+
+**DATABASE_URL**
+
+   Specify the configuration for database with format:
+
+   database://user:password@ip:port/database_name
+
 [//]: # (## Screenshots)
 
 ## Contributing
