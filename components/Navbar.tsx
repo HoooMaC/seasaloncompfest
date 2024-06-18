@@ -4,8 +4,12 @@ import Image from 'next/image';
 import styles from '@/components/Navbar.module.css';
 import Link from 'next/link';
 import { useLayoutEffect, useState } from 'react';
+import { signOut } from '@/auth';
+import { Button } from '@/components/ui/button';
+import { User } from 'next-auth';
+import { SignOutAction } from '@/actions/SignOutAction';
 
-const Navbar = () => {
+const Navbar = ({ user }: { user: User | undefined }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false);
   return (
     <nav className='fixed top-0 z-50 w-screen border-b-2 border-b-secondary bg-background'>
@@ -60,6 +64,14 @@ const Navbar = () => {
           <li className={styles.list_item}>
             <Link href='#book'>Book</Link>
           </li>
+          {user && (
+            <form action={SignOutAction}>
+              <li className={styles.list_item}>
+                Hello {user.name}
+                <Button type='submit'>SignOut</Button>
+              </li>
+            </form>
+          )}
         </ul>
       </div>
     </nav>

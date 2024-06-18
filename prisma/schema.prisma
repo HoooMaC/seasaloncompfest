@@ -20,20 +20,58 @@ enum Service {
 }
 
 model Reservation {
-  id String @id @unique @default(uuid())
-  name String
-  phone String
+  id        String   @id @unique @default(uuid())
+  name      String
+  phone     String
   // TEMPORARY. For now string
-  type String
-  date String
-  time String
+  type      String
+  date      String
+  time      String
   createdAt DateTime @default(now())
 }
 
 model Review {
-  id Int @unique @default(autoincrement())
-  name String
-  rating Int
-  message String
+  id        Int      @unique @default(autoincrement())
+  name      String
+  rating    Int
+  message   String
   createdAt DateTime @default(now())
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime? @map("email_verified")
+  image         String?
+  password      String?
+  accounts      Account[]
+  role          Role @default(USER)
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String  @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
 }

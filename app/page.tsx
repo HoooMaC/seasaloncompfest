@@ -7,11 +7,14 @@ import ReviewsSection from '@/app/ReviewsSection';
 import NewReviewDialog from '@/components/NewReviewDialog';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { auth } from '@/auth';
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+  const user = session?.user;
   return (
     <>
-      <Navbar />
+      <Navbar user={user} />
       <main>
         <HeroSection />
         <AboutSection />
