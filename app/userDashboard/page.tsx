@@ -1,0 +1,14 @@
+import ProfileSection from '@/components/User/ProfileSection';
+import { CardHeader, CardTitle } from '@/components/ui/card';
+
+const UserDashboard = () => {
+  return (
+    <>
+      <CardHeader>
+        <CardTitle>Profile</CardTitle>
+      </CardHeader>
+      <ProfileSection />;
+    </>
+  );
+};
+export default UserDashboard;

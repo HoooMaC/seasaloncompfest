@@ -27,7 +27,7 @@ const HeroSection = () => {
           </p>
           {/*<SecondaryButton>Explore</SecondaryButton>*/}
           <Button variant='secondary' className='w-1/5 min-w-[100px]'>
-            Button
+            Something
           </Button>
         </div>
       </div>

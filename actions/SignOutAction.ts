@@ -6,5 +6,5 @@ import { redirect } from 'next/navigation';
 
 export const SignOutAction = async (req: NextRequest) => {
   const { nextUrl } = req;
-  await signOut({ redirectTo: DEFAULT_LOGIN_REDIRECT });
+  await signOut({ redirectTo: '/login' });
 };

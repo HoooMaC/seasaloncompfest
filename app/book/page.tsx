@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import ReservationForm from '@/app/book/ReservationForm';
-import { RenderWords, TextGenerateEffect } from '@/components/ui/TextGenerate';
+import { TextGenerateEffect } from '@/components/ui/TextGenerate';
 
 const BookingPage = () => {
   return (

@@ -1,22 +1,12 @@
-import { auth } from '@/auth';
-import { getUserbyId } from '@/data/User';
-import assert from 'assert';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { User, Wrench } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { User } from 'lucide-react';
 
-const ProfileSection = async () => {
-  const session = await auth();
-
-  // assert because this route must be protected
-  // console.log({ session });
-  assert(session !== null);
-  assert(session.user !== undefined);
-  const user = await getUserbyId(session.userId as string);
-  assert(user !== null);
-
+const UserDashboard = () => {
   return (
     <>
+      <CardHeader>
+        <CardTitle>Profile</CardTitle>
+      </CardHeader>
       <CardHeader>
         <User />
       </CardHeader>
@@ -25,13 +15,13 @@ const ProfileSection = async () => {
           <h3 className='w-[150px] border-r-[1px] border-gray-500/50 font-medium'>
             Name
           </h3>
-          <p className='w-full'>{user.name}</p>
+          <p className='w-full'>user.name</p>
         </div>
         <div className='flex items-center space-x-4 rounded-md border p-4'>
           <h3 className='w-[150px] border-r-[1px] border-gray-500/50 font-medium'>
             Email
           </h3>
-          <p className='w-full'>{user.email}</p>
+          <p className='w-full'>user.email</p>
         </div>
         <div className='flex items-center space-x-4 rounded-md border p-4'>
           <h3 className='w-[150px] border-r-[1px] border-gray-500/50 font-medium'>
@@ -43,10 +33,10 @@ const ProfileSection = async () => {
           <h3 className='w-[150px] border-r-[1px] border-gray-500/50 font-medium'>
             Role
           </h3>
-          <p className='w-full'>{user.role}</p>
+          <p className='w-full'>user.role</p>
         </div>
       </CardContent>
     </>
   );
 };
-export default ProfileSection;
+export default UserDashboard;
