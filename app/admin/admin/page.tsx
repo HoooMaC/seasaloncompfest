@@ -12,12 +12,12 @@ import {
 import { Button } from '@/components/ui/button';
 import { dbPrisma } from '@/lib/dbprisma';
 
-const ReviewsPage = async () => {
-  const allReview = await dbPrisma.review.findMany({});
+const ManageAdminPage = async () => {
+  const allUser = await dbPrisma.user.findMany({});
   return (
     <>
       <CardHeader>
-        <CardTitle>Manage Reviews</CardTitle>
+        <CardTitle>Manage Admin</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>
@@ -26,24 +26,22 @@ const ReviewsPage = async () => {
             <TableRow>
               <TableHead className='w-[100px]'>ID</TableHead>
               <TableHead>Name</TableHead>
-              <TableHead>Rating</TableHead>
-              <TableHead>Message</TableHead>
-              <TableHead>Date</TableHead>
-              {/*<TableHead>Branch</TableHead>*/}
-              <TableHead className='text-right'>Price</TableHead>
+              <TableHead>Email</TableHead>
+              <TableHead>Email Verified</TableHead>
+              <TableHead>Role</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {allReview.map(review => {
+            {allUser.map(user => {
               return (
                 <TableRow>
-                  <TableCell className='font-medium'>{review.id}</TableCell>
-                  <TableCell>{review.name}</TableCell>
-                  <TableCell>{review.Rating}</TableCell>
-                  <TableCell>{review.Message}</TableCell>
-                  <TableCell className='text-right'>
-                    {review.Date.toLocaleDateString('en-US')}
+                  <TableCell className='font-medium'>{user.id}</TableCell>
+                  <TableCell>{user.name}</TableCell>
+                  <TableCell>{user.email}</TableCell>
+                  <TableCell>
+                    {user.emailVerified?.toString() || 'not' + ' verified'}
                   </TableCell>
+                  <TableCell>{user.role}</TableCell>
                 </TableRow>
               );
             })}
@@ -53,4 +51,4 @@ const ReviewsPage = async () => {
     </>
   );
 };
-export default ReviewsPage;
+export default ManageAdminPage;

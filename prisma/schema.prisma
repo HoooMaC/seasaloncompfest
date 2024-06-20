@@ -13,46 +13,23 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum Service {
-  HAIR
-  NAIL
-  FACE
-}
-
-model Reservation {
-  id        String   @id @unique @default(uuid())
-  name      String
-  phone     String
-  // TEMPORARY. For now string
-  type      String
-  date      String
-  time      String
-  createdAt DateTime @default(now())
-}
-
-model Review {
-  id        Int      @unique @default(autoincrement())
-  name      String
-  rating    Int
-  message   String
-  createdAt DateTime @default(now())
-}
-
 enum Role {
   ADMIN
   USER
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String        @id @default(cuid())
   name          String?
-  email         String?   @unique
-  emailVerified DateTime? @map("email_verified")
+  email         String?       @unique
+  emailVerified DateTime?     @map("email_verified")
   image         String?
   password      String?
   accounts      Account[]
-  role          Role @default(USER)
+  role          Role          @default(USER)
+  reservation   Reservation[] // 1 user could have many reservations
 
+  // review        Review[] // 1 user could have many review - 1 to m
   @@map("users")
 }
 
@@ -74,4 +51,59 @@ model Account {
 
   @@unique([provider, providerAccountId])
   @@map("accounts")
+}
+
+model Reservation {
+  id        String   @id @unique @default(uuid())
+  name      String
+  phone     String
+  date      DateTime
+  startTime String
+  endTime   String // should not filled manually. startTime + service duration
+  createdAt DateTime @default(now())
+
+  serviceId String // 1 reservation should have 1 and only service - 1 to m
+  service   Service @relation(fields: [serviceId], references: [id])
+
+  customerId String? //   User id is optinal, because not logged in user also can make reservation
+  customer   User?   @relation(fields: [customerId], references: [id])
+
+  branchId String //   Each reservation should have 1 and only branch - 1 to m
+  branch   Branch? @relation(fields: [branchId], references: [id])
+}
+
+model Service {
+  id               String        @id @default(uuid())
+  name             String
+  durationInMinute Int
+  image            String?
+  description      String?
+  priceInRupiah    Int
+  // isMemberOnly     Boolean       @default(false) // TODO !!!
+
+  reservations     Reservation[] //  1 Service Have many reservations - m to 1
+
+  branchs Branch[] // 1 Service Could have 1 and more branch - m to m
+
+  // reviews Review[]
+}
+
+model Branch {
+  id        String   @id @default(uuid())
+  address   String
+  city      String
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  services Service[] //   have many services - m to m
+
+  reservation Reservation[] // 1 Branch could have many reservations - m to 1
+}
+
+model Review {
+  id        Int      @unique @default(autoincrement())
+  name      String
+  rating    Int
+  message   String
+  createdAt DateTime @default(now())
 }

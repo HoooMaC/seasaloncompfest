@@ -4,6 +4,7 @@ import { BookingSchema } from '@/schemas/BookingSchema';
 import * as zod from 'zod';
 import { dbPrisma } from '@/lib/dbprisma';
 import { redirect } from 'next/navigation';
+import { Role } from '@prisma/client';
 
 export const newReservation = async (
   values: zod.infer<typeof BookingSchema>

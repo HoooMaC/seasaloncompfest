@@ -1,7 +1,7 @@
 import { CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { User } from 'lucide-react';
 
-const UserDashboard = () => {
+const user = () => {
   return (
     <>
       <CardHeader>
@@ -39,4 +39,4 @@ const UserDashboard = () => {
     </>
   );
 };
-export default UserDashboard;
+export default user;

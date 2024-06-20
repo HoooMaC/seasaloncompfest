@@ -7,7 +7,7 @@ const UserDashboard = () => {
       <CardHeader>
         <CardTitle>Profile</CardTitle>
       </CardHeader>
-      <ProfileSection />;
+      <ProfileSection />
     </>
   );
 };

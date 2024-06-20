@@ -1,5 +1,12 @@
 import { Card } from '@/components/ui/card';
-import { MessageSquareMore, ScrollText, Settings, User } from 'lucide-react';
+import {
+  MessageSquareMore,
+  ScrollText,
+  Settings,
+  Lock,
+  ShieldPlus,
+  User,
+} from 'lucide-react';
 import Link from 'next/link';
 
 const AdminDashboardLayout = ({ children }: { children: React.ReactNode }) => {
@@ -29,8 +36,18 @@ const AdminDashboardLayout = ({ children }: { children: React.ReactNode }) => {
             <MessageSquareMore />
             <span>Manage Reviews</span>
           </Link>
+
           <div className='w-full border border-white' />
-          <span>Super Admin</span>
+          <div className='flex'>
+            <Lock />
+            <span>Super Admin</span>
+          </div>
+          <div className='ps-2'>
+            <Link href='/admin/admin' className='flex gap-2'>
+              <ShieldPlus />
+              <span>Manage Admin</span>
+            </Link>
+          </div>
         </div>
         <Link href='/admin/setting' className='flex gap-2'>
           <Settings />

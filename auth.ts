@@ -15,6 +15,9 @@ export const {
   signIn,
 } = NextAuth({
   callbacks: {
+    redirect: async ({ url, baseUrl }) => {
+      return baseUrl;
+    },
     session: async ({ token, session }) => {
       if (token.sub && session.user) {
         session.userId = token.sub;

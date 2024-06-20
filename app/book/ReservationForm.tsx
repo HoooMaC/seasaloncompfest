@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useTransition } from 'react';
+import React, { useEffect, useState, useTransition } from 'react';
 import {
   Form,
   FormControl,
@@ -50,8 +50,15 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import assert from 'assert';
+import { Service } from '@prisma/client';
+import { useQuery } from '@tanstack/react-query';
+import { getAllServices } from '@/data/Service';
+import { handleWebpackExternalForEdgeRuntime } from 'next/dist/build/webpack/plugins/middleware-plugin';
 
 interface ReservationProps {
+  serviceList: Service[];
+  isLoggedIn: boolean;
+  userName?: string | null; // if user not logged in then it'll be null
   className?: string;
 }
 
@@ -59,7 +66,14 @@ interface Response {
   error?: string;
   success?: string;
 }
-const ReservationForm = ({ className }: ReservationProps) => {
+const ReservationForm = ({
+  serviceList,
+  isLoggedIn,
+  userName = null,
+  className,
+}: ReservationProps) => {
+  const [inputName, setInputName] = useState<string>(userName || '');
+
   const [isPending, startTransition] = useTransition();
   const [confirmation, setConfirmation] = useState<boolean>(false);
   const [response, setResponse] = useState<Response | undefined>();
@@ -94,7 +108,6 @@ const ReservationForm = ({ className }: ReservationProps) => {
     });
     form.reset();
   }
-
   return (
     <div className={cn('ms-auto w-1/3 p-10', className)}>
       {confirmation && (
@@ -191,13 +204,27 @@ const ReservationForm = ({ className }: ReservationProps) => {
                 control={form.control}
                 name='name'
                 render={({ field }) => {
+                  const nameField = userName
+                    ? {
+                        ...field,
+                        value: inputName,
+                        onChange: event => {
+                          setInputName(event.target.value);
+                          return;
+                        },
+                      }
+                    : { ...field };
                   return (
                     <FormItem>
                       <FormLabel className='block w-full text-left'>
                         Name
                       </FormLabel>
                       <FormControl>
-                        <Input {...field} placeholder='Jhon Doe' type='text' />
+                        <Input
+                          {...nameField}
+                          placeholder='Jhon Doe'
+                          type='text'
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -241,11 +268,12 @@ const ReservationForm = ({ className }: ReservationProps) => {
                             <SelectValue placeholder='Type' />
                           </SelectTrigger>
                           <SelectContent>
-                            {/* Later on will be take from database, because
-                           teh services will be dynamic*/}
-                            <SelectItem value='Hair'>Hair</SelectItem>
-                            <SelectItem value='Nail'>Nail</SelectItem>
-                            <SelectItem value='Face'>Face</SelectItem>
+                            {serviceList.map((service, index) => (
+                              // TODO : id or name for value attribute
+                              <SelectItem key={service.id} value={service.id}>
+                                {service.name}
+                              </SelectItem>
+                            ))}
                           </SelectContent>
                         </Select>
                       </FormControl>

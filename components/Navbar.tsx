@@ -3,11 +3,59 @@ import Image from 'next/image';
 
 import styles from '@/components/Navbar.module.css';
 import Link from 'next/link';
-import { useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { signOut } from '@/auth';
 import { Button } from '@/components/ui/button';
 import { User } from 'next-auth';
 import { SignOutAction } from '@/actions/SignOutAction';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
+import { cn } from '@/utils/cn';
+import { UserIcon } from 'lucide-react';
+
+const components: { title: string; href: string; description: string }[] = [
+  {
+    title: 'Logout',
+    href: '/api/logout',
+    description:
+      'A modal dialog that interrupts the user with important content and expects a response.',
+  },
+  {
+    title: 'Hover Card',
+    href: '/docs/primitives/hover-card',
+    description:
+      'For sighted users to preview content available behind a link.',
+  },
+  {
+    title: 'Progress',
+    href: '/docs/primitives/progress',
+    description:
+      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+  },
+  {
+    title: 'Scroll-area',
+    href: '/docs/primitives/scroll-area',
+    description: 'Visually or semantically separates content.',
+  },
+  {
+    title: 'Tabs',
+    href: '/docs/primitives/tabs',
+    description:
+      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
+  },
+  {
+    title: 'Tooltip',
+    href: '/docs/primitives/tooltip',
+    description:
+      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
+  },
+];
 
 const Navbar = ({ user }: { user: User | undefined }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false);
@@ -64,17 +112,79 @@ const Navbar = ({ user }: { user: User | undefined }) => {
           <li className={styles.list_item}>
             <Link href='#book'>Book</Link>
           </li>
-          {user && (
-            <form action={SignOutAction}>
-              <li className={styles.list_item}>
-                Hello {user.name}
-                <Button type='submit'>SignOut</Button>
-              </li>
-            </form>
-          )}
         </ul>
+        <div className='flex p-4 lg:p-0'>
+          {user ? (
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>
+                    <div className='p-2'>
+                      <UserIcon />
+                    </div>
+                    {user.name}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className='grid w-fit gap-3 p-4'>
+                      <ListItem
+                        title={'Dashboard'}
+                        className={'w-full text-black'}
+                        href={'/user'}
+                      ></ListItem>
+                      <form action={SignOutAction}>
+                        <Button
+                          className='bg-transparent hover:bg-transparent'
+                          type='submit'
+                        >
+                          <ListItem
+                            title={'Sign Out'}
+                            className={'w-full text-black'}
+                            // href={component.href}
+                          ></ListItem>
+                        </Button>
+                      </form>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          ) : (
+            <Link
+              className='w-[100px] rounded-sm border border-primary /50 p-2 text-center transition-all duration-200 hover:bg-accent'
+              href='/login'
+            >
+              Login
+            </Link>
+          )}
+        </div>
       </div>
     </nav>
   );
 };
 export default Navbar;
+
+const ListItem = React.forwardRef<
+  React.ElementRef<'a'>,
+  React.ComponentPropsWithoutRef<'a'>
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            className
+          )}
+          {...props}
+        >
+          <div className='text-sm font-medium leading-none'>{title}</div>
+          <p className='line-clamp-2 text-sm leading-snug text-muted-foreground'>
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = 'ListItem';

@@ -5,7 +5,7 @@ import { SignOutAction } from '@/actions/SignOutAction';
 import styles from '@/components/Navbar.module.css';
 import { Button } from '@/components/ui/button';
 
-const UserDashboardLayout = ({ children }: { children: React.ReactNode }) => {
+const UserLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     // <div className='flex h-dvh gap-12 bg-background p-10'>
     <div className='flex h-dvh gap-12 bg-background p-10'>
@@ -20,16 +20,16 @@ const UserDashboardLayout = ({ children }: { children: React.ReactNode }) => {
           <h1 className='text-5xl font-bold'>Sea</h1>
         </div>
         <div className='flex h-full flex-col items-start gap-3 pt-8'>
-          <Link href='/userDashboard' className='flex gap-2'>
+          <Link href='/user' className='flex gap-2'>
             <User />
             <span>Profile</span>
           </Link>
-          <Link href='/userDashboard/transactionHistory' className='flex gap-2'>
+          <Link href='/user/transactionHistory' className='flex gap-2'>
             <ScrollText />
             <span>Show History</span>
           </Link>
         </div>
-        <Link href='/userDashboard/setting' className='flex gap-2'>
+        <Link href='/user/setting' className='flex gap-2'>
           <Settings />
           <span>Settings</span>
         </Link>
@@ -49,4 +49,4 @@ const UserDashboardLayout = ({ children }: { children: React.ReactNode }) => {
     </div>
   );
 };
-export default UserDashboardLayout;
+export default UserLayout;

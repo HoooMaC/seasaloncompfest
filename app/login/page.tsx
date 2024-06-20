@@ -92,11 +92,7 @@ const RegisterPage = () => {
                     <FormItem>
                       <FormLabel>Password</FormLabel>
                       <FormControl>
-                        <Input
-                          {...field}
-                          type='password'
-                          placeholder='********'
-                        />
+                        <Input {...field} type='text' placeholder='********' />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

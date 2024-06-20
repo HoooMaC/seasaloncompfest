@@ -8,24 +8,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/admin/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/reviews/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/services/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/setting/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/userDashboard/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/userDashboard/setting/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/userDashboard/transactionHistory/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/NewServiceAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/admin/admin/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/auth/[...nextauth]/singOut.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/admin/NewServiceDialog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/template.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/ServiceSchema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/saltAndHash.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/SignOutAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/SignOutAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(protected)/userDashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/userDashboard/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/HeroSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/CreateNewAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/CreateNewAccount.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/LoginAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/LoginAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/NewReservationAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/NewReservationAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/reviews/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/reviews/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/services/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/services/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/book/ReservationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/book/ReservationForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/book/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/book/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/User/ProfileSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/ProfileSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/User/TransactionHistorySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/TransactionHistorySection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/userDashboard/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/userDashboard/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/userDashboard/setting/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/userDashboard/transactionHistory/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Reservation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/Reservation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,23 +83,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Code/Web/seasaloncompfest/app/admin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Code\\Web\\seasaloncompfest\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Code\\Web\\seasaloncompfest\\node_modules\\typescript\\lib",
-    "ts.rename.search.for.dynamic.occurrences": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Code/Web/seasaloncompfest/app/admin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Code\\Web\\seasaloncompfest\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Code\\Web\\seasaloncompfest\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.rename.search.for.dynamic.occurrences&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Code\Web\seasaloncompfest\app\admin" />
@@ -124,6 +141,15 @@
       <workItem from="1718709744950" duration="5414000" />
       <workItem from="1718717025018" duration="1200000" />
       <workItem from="1718752773724" duration="7120000" />
+      <workItem from="1718780629535" duration="1554000" />
+      <workItem from="1718782304064" duration="290000" />
+      <workItem from="1718782617930" duration="73000" />
+      <workItem from="1718785154204" duration="455000" />
+      <workItem from="1718786015681" duration="725000" />
+      <workItem from="1718786848996" duration="9290000" />
+      <workItem from="1718807763241" duration="5259000" />
+      <workItem from="1718842715107" duration="9103000" />
+      <workItem from="1718862900499" duration="11097000" />
     </task>
     <servers />
   </component>

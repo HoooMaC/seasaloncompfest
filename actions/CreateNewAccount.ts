@@ -1,11 +1,11 @@
 'use server';
 import * as zod from 'zod';
-import bcrypt from 'bcryptjs';
 
 import { redirect } from 'next/navigation';
 import { RegisterSchema } from '@/schemas/AuthSchema';
 
 import { dbPrisma } from '@/lib/dbprisma';
+import { saltAndHash } from '@/utils/saltAndHash';
 
 export default async function createNewAccount(
   values: zod.infer<typeof RegisterSchema>
@@ -22,16 +22,24 @@ export default async function createNewAccount(
     return { response: { error: 'Email already used' } };
   }
 
-  const salt = await bcrypt.genSalt(10);
-  const pwHash = await bcrypt.hash(password, salt);
+  // TODO Fix hashing problem
+  // const pwHash = await saltAndHash(
+  //   password,
+  //   'generated password from register'
+  // );
+  const pwHash = password;
 
-  const result = await dbPrisma.user.create({
-    data: {
-      name: name,
-      email: email,
-      password: pwHash,
-    },
-  });
-
+  try {
+    const result = await dbPrisma.user.create({
+      data: {
+        name: name,
+        email: email,
+        password: pwHash,
+      },
+    });
+  } catch (error) {
+    console.error({ error });
+    throw error;
+  }
   return redirect('https://localhost:3000/');
 }

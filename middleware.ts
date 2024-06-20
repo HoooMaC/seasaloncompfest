@@ -1,9 +1,10 @@
-import NextAuth from 'next-auth';
+import NextAuth, { Session } from 'next-auth';
 import authConfig from '@/auth.config';
 import { next } from 'sucrase/dist/types/parser/tokenizer';
 import { redirect } from 'next/navigation';
 import { NextResponse } from 'next/server';
 import {
+  adminPrefix,
   apiAuthPrefix,
   authRoutes,
   DEFAULT_LOGIN_REDIRECT,
@@ -21,9 +22,14 @@ export default auth(req => {
   // console.log(`Login: ${isLoggedIn}`);
   // console.log(`ROUTE PATH: ${pathname}`);
 
+  // TEMPORARY
+  if (pathname === '/userDashboard')
+    return NextResponse.redirect(new URL('/user', nextUrl));
+
   const isApiAuthRoute = pathname.startsWith(apiAuthPrefix);
   const isPublicRoute = publicRoutes.includes(pathname);
   const isAuthRoute = authRoutes.includes(pathname);
+  const isAdminRoute = pathname.startsWith(adminPrefix);
 
   if (isApiAuthRoute) return NextResponse.next();
 
@@ -32,6 +38,15 @@ export default auth(req => {
     if (isLoggedIn)
       return NextResponse.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl));
     return NextResponse.next();
+  }
+
+  if (isAdminRoute) {
+    if (isLoggedIn) {
+      const admin = req.auth as Session;
+      if (admin.user?.email !== 'thomas.n@compfest.id') {
+        return NextResponse.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl));
+      }
+    }
   }
 
   // If not public route and not logged in, ask to logged in first
