@@ -17,7 +17,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/utils/cn';
-import { UserIcon } from 'lucide-react';
+import { LayoutDashboard, LogOut, UserIcon } from 'lucide-react';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -128,19 +128,34 @@ const Navbar = ({ user }: { user: User | undefined }) => {
                     <ul className='grid w-fit gap-3 p-4'>
                       <ListItem
                         title={'Dashboard'}
-                        className={'w-full text-black'}
+                        className={
+                          'flex w-full items-center justify-center gap-2' +
+                          ' text-center' +
+                          ' text-black'
+                        }
                         href={'/user'}
-                      ></ListItem>
+                      >
+                        <LayoutDashboard
+                          size={18}
+                          color='black'
+                        ></LayoutDashboard>
+                      </ListItem>
                       <form action={SignOutAction}>
                         <Button
-                          className='bg-transparent hover:bg-transparent'
+                          className='bg-transparent hover:bg-accent'
                           type='submit'
+                          // asChild={true}
                         >
                           <ListItem
                             title={'Sign Out'}
-                            className={'w-full text-black'}
-                            // href={component.href}
-                          ></ListItem>
+                            className={
+                              'flex w-full items-center justify-center' +
+                              ' text-black hover:bg-transparent' +
+                              ' gap-2 hover:text-black'
+                            }
+                          >
+                            <LogOut color='black' size={18}></LogOut>
+                          </ListItem>
                         </Button>
                       </form>
                     </ul>
@@ -150,7 +165,7 @@ const Navbar = ({ user }: { user: User | undefined }) => {
             </NavigationMenu>
           ) : (
             <Link
-              className='w-[100px] rounded-sm border border-primary /50 p-2 text-center transition-all duration-200 hover:bg-accent'
+              className='h-[40px] w-[180px] rounded-md bg-background px-4 py-2 text-center transition-all duration-200 hover:bg-accent'
               href='/login'
             >
               Login
@@ -173,7 +188,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            'block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
             className
           )}
           {...props}
