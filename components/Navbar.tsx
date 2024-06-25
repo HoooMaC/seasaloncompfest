@@ -5,7 +5,7 @@ import styles from '@/components/Navbar.module.css';
 import Link from 'next/link';
 import React, { useLayoutEffect, useState } from 'react';
 import { signOut } from '@/auth';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { User } from 'next-auth';
 import { SignOutAction } from '@/actions/SignOutAction';
 import {
@@ -19,41 +19,11 @@ import {
 import { cn } from '@/utils/cn';
 import { LayoutDashboard, LogOut, UserIcon } from 'lucide-react';
 
-const components: { title: string; href: string; description: string }[] = [
+const components: { title: string; href: string; icon?: React.ReactNode }[] = [
   {
-    title: 'Logout',
-    href: '/api/logout',
-    description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
-  },
-  {
-    title: 'Hover Card',
-    href: '/docs/primitives/hover-card',
-    description:
-      'For sighted users to preview content available behind a link.',
-  },
-  {
-    title: 'Progress',
-    href: '/docs/primitives/progress',
-    description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
-  },
-  {
-    title: 'Scroll-area',
-    href: '/docs/primitives/scroll-area',
-    description: 'Visually or semantically separates content.',
-  },
-  {
-    title: 'Tabs',
-    href: '/docs/primitives/tabs',
-    description:
-      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
-  },
-  {
-    title: 'Tooltip',
-    href: '/docs/primitives/tooltip',
-    description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
+    title: 'Dashboard',
+    href: '/user',
+    icon: <LayoutDashboard />,
   },
 ];
 
@@ -126,25 +96,25 @@ const Navbar = ({ user }: { user: User | undefined }) => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className='grid w-fit gap-3 p-4'>
-                      <ListItem
-                        title={'Dashboard'}
-                        className={
-                          'flex w-full items-center justify-center gap-2' +
-                          ' text-center' +
-                          ' text-black'
-                        }
-                        href={'/user'}
-                      >
-                        <LayoutDashboard
-                          size={18}
-                          color='black'
-                        ></LayoutDashboard>
-                      </ListItem>
+                      {components.map((item, index) => {
+                        return (
+                          <ListItem
+                            key={index}
+                            title={item.title}
+                            className={`w-full gap-2 ${buttonVariants({ variant: 'outline' })}`}
+                            href={item.href}
+                          >
+                            {item?.icon}
+                          </ListItem>
+                        );
+                      })}
+                      <div className='border-gray mx-auto w-4/5 rounded-full border-t' />
+
                       <form action={SignOutAction}>
                         <Button
                           className='bg-transparent hover:bg-accent'
                           type='submit'
-                          // asChild={true}
+                          variant='outline'
                         >
                           <ListItem
                             title={'Sign Out'}
@@ -165,7 +135,9 @@ const Navbar = ({ user }: { user: User | undefined }) => {
             </NavigationMenu>
           ) : (
             <Link
-              className='h-[40px] w-[180px] rounded-md bg-background px-4 py-2 text-center transition-all duration-200 hover:bg-accent'
+              className={`h-[40px] w-[180px] ${buttonVariants({
+                variant: 'outline',
+              })}`}
               href='/login'
             >
               Login

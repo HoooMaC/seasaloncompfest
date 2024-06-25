@@ -14,6 +14,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const TransactionHistoryPage = async () => {
   const session = await auth();
@@ -73,10 +74,6 @@ const TransactionHistoryPage = async () => {
             })}
           </TableBody>
         </Table>
-
-        <Button className='ms-auto block' variant='outline'>
-          Make a new reservation
-        </Button>
       </CardContent>
     </>
   );
