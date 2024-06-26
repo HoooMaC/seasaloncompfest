@@ -4,7 +4,7 @@ import { dbPrisma } from '@/lib/dbprisma';
 export const getAllServices = async (): Promise<Service[]> => {
   try {
     const result = await dbPrisma.service.findMany({});
-    return { result };
+    return result;
   } catch (error) {
     return { error: error };
   }

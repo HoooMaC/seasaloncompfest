@@ -22,7 +22,7 @@ const TransactionHistoryPage = async () => {
   // Need to get all the history section
   const allReservations = await dbPrisma.reservation.findMany({
     where: {
-      customerId: session?.userId,
+      customerId: session?.user?.id,
     },
     include: {
       service: true,

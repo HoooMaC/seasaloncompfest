@@ -12,7 +12,7 @@ const ProfileSection = async () => {
   // console.log({ session });
   assert(session !== null);
   assert(session.user !== undefined);
-  const user = await getUserbyId(session.userId as string);
+  const user = await getUserbyId(session.user.id as string);
   assert(user !== null);
 
   return (

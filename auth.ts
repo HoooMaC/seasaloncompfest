@@ -21,6 +21,7 @@ export const {
     session: async ({ token, session }) => {
       if (token.sub && session.user) {
         session.userId = token.sub;
+        // @ts-ignore
         session.user.role = token.role;
       }
       // console.log({ session });

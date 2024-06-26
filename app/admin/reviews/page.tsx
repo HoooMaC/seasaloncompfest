@@ -28,8 +28,8 @@ const ReviewsPage = async () => {
               <TableHead>Name</TableHead>
               <TableHead>Rating</TableHead>
               <TableHead>Message</TableHead>
-              <TableHead>Date</TableHead>
-              {/*<TableHead>Branch</TableHead>*/}
+              {/*<TableHead>Date</TableHead>*/}
+              <TableHead>Branch</TableHead>
               <TableHead className='text-right'>Price</TableHead>
             </TableRow>
           </TableHeader>
@@ -39,10 +39,10 @@ const ReviewsPage = async () => {
                 <TableRow>
                   <TableCell className='font-medium'>{review.id}</TableCell>
                   <TableCell>{review.name}</TableCell>
-                  <TableCell>{review.Rating}</TableCell>
-                  <TableCell>{review.Message}</TableCell>
+                  <TableCell>{review.rating}</TableCell>
+                  <TableCell>{review.message}</TableCell>
                   <TableCell className='text-right'>
-                    {review.Date.toLocaleDateString('en-US')}
+                    {review.createdAt.toLocaleDateString('en-US')}
                   </TableCell>
                 </TableRow>
               );

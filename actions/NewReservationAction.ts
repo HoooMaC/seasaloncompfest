@@ -4,7 +4,7 @@ import { BookingSchema } from '@/schemas/BookingSchema';
 import * as zod from 'zod';
 import { dbPrisma } from '@/lib/dbprisma';
 import { redirect } from 'next/navigation';
-import { Role } from '@prisma/client';
+import { Branch, Role } from '@prisma/client';
 
 export const newReservation = async (
   values: zod.infer<typeof BookingSchema>
@@ -16,13 +16,27 @@ export const newReservation = async (
 
   const { name, phone, type, date, time } = validatedFields.data;
   const stringDate = date.toDateString();
+
+  const service = await dbPrisma.service.findFirst({
+    where: {
+      name: type,
+    },
+  });
+
+  const branch = await dbPrisma.branch.findFirst({});
+  // TODO
+  const customer = await dbPrisma.user.findFirst({ where: { name: name } });
+
   const result = await dbPrisma.reservation.create({
     data: {
-      name: name,
+      name: customer?.name || name,
       phone: phone,
-      type: type,
-      date: stringDate,
-      time: time,
+      date: date,
+      startTime: time,
+      endTime: time + service?.durationInMinute,
+      customerId: customer?.id,
+      serviceId: service?.id || '',
+      branchId: branch?.id || '',
     },
   });
   return redirect('http://localhost:3000/');
