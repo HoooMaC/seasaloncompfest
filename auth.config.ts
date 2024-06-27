@@ -1,9 +1,8 @@
 import Credentials from 'next-auth/providers/credentials';
 import type { NextAuthConfig } from 'next-auth';
-import bcrypt from 'bcryptjs';
 import { dbPrisma } from '@/lib/dbprisma';
 import { LoginSchema } from '@/schemas/AuthSchema';
-import { hashPassword, verifyPassword } from '@/utils/hash';
+import { verifyPassword } from '@/utils/hash';
 import assert from 'assert';
 
 // Notice this is only an object, not a full Auth.js instance
@@ -33,7 +32,6 @@ export default {
             email: email,
           },
         });
-        // console.log({ user });
 
         if (!user) throw new Error('Login failed');
 
@@ -43,23 +41,12 @@ export default {
           process.env.AUTH_SECRET
         );
 
-        // TODO : Delete
-        // console.log('--------------------------------------');
-        // console.log(`${user.password} and\n${hashedPassword}`);
-        // console.log('--------------------------------------');
         console.log({ checkPassword });
         if (checkPassword) {
-          console.log('Login Successful');
-
           return user;
+        } else {
+          throw new Error('Login failed');
         }
-
-        // TEMPORARY : Just for development
-        const hashedInput = await bcrypt.hash(user.password as string, 10);
-        const checkSecondTime = hashedInput === hashedPassword;
-        if (!checkPassword || !checkSecondTime) throw new Error('Login failed');
-
-        return user;
       },
     }),
   ],
