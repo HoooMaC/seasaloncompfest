@@ -29,9 +29,6 @@ const components: { title: string; href: string; icon?: React.ReactNode }[] = [
 
 const Navbar = ({ user }: { user: User | undefined }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false);
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
   return (
     <nav className='fixed top-0 z-50 w-screen border-b-2 border-b-secondary bg-background'>
       <div className='container flex items-center justify-between p-4 lg:p-0'>
@@ -113,6 +110,7 @@ const Navbar = ({ user }: { user: User | undefined }) => {
                       })}
                       <div className='border-gray mx-auto w-4/5 rounded-full border-t' />
 
+                      {/*@ts-ignore*/}
                       <form action={SignOutAction}>
                         <Button
                           className='bg-transparent hover:bg-accent'

@@ -25,6 +25,8 @@ const Sidebar = () => {
           <Settings />
           <span>Settings</span>
         </Link>
+
+        {/*@ts-ignore*/}
         <form action={SignOutAction}>
           <Button
             variant='outline'

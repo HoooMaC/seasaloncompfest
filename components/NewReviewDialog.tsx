@@ -93,16 +93,11 @@ const NewReviewDialog = () => {
       {
         opacity: [0, 1, 1, 0],
         y: [20, -10, -10, 20],
-        transition: {
-          opacity: {
-            times: [0.05, 0.2, 0.9, 1],
-          },
-          y: {
-            times: [0.05, 0.2, 0.9, 1],
-          },
-        },
       },
-      { duration: 8 }
+      {
+        duration: 8,
+        times: [0.05, 0.2, 0.9, 1],
+      }
     );
     await animate(
       scope.current,

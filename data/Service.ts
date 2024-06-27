@@ -6,7 +6,7 @@ export const getAllServices = async (): Promise<Service[]> => {
     const result = await dbPrisma.service.findMany({});
     return result;
   } catch (error) {
-    return { error: error };
+    throw new Error('Erorr fetching services.');
   }
 };
 
