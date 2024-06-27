@@ -8,17 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/utils/hash.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/RegisterAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/RegisterAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/reviews/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/reviews/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/book/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/book/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/book/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/book/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/user/setting/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/setting/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/user/transactionHistory/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/transactionHistory/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/User/ProfileSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/ProfileSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/Service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/CreateNewAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/CreateNewAccount.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/form/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/form/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/saltAndHash.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +125,8 @@
       <workItem from="1718862900499" duration="11097000" />
       <workItem from="1719055008894" duration="2238000" />
       <workItem from="1719315159917" duration="4871000" />
-      <workItem from="1719400767233" duration="6536000" />
+      <workItem from="1719400767233" duration="9138000" />
+      <workItem from="1719493228647" duration="1072000" />
     </task>
     <servers />
   </component>

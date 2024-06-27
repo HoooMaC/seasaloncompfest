@@ -72,8 +72,9 @@ To run the project on your local machine, follow these steps:
 **DATABASE_URL**
 
    Specify the configuration for database with format:
-
    database://user:password@ip:port/database_name
+   
+   you can see the detail [here](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/connect-your-database-typescript-postgresql)
 
 [//]: # (## Screenshots)
 

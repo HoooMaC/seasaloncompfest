@@ -3,7 +3,8 @@ import type { NextAuthConfig } from 'next-auth';
 import bcrypt from 'bcryptjs';
 import { dbPrisma } from '@/lib/dbprisma';
 import { LoginSchema } from '@/schemas/AuthSchema';
-import { saltAndHash } from '@/utils/saltAndHash';
+import { hashPassword, verifyPassword } from '@/utils/hash';
+import assert from 'assert';
 
 // Notice this is only an object, not a full Auth.js instance
 export default {
@@ -22,34 +23,36 @@ export default {
 
         const { email, password } = validatedFields.data;
 
-        // TODO Fix hashing problem
-        // const hashedPassword = await saltAndHash(
-        //   password,
-        //   'generated password hashed from login'
-        // );
-        const hashedPassword = password;
+        assert(
+          process.env.AUTH_SECRET,
+          'Need to provide some AUTH_SECRET in' + ' environment variable'
+        );
 
         const user = await dbPrisma.user.findUnique({
           where: {
             email: email,
           },
         });
-
         // console.log({ user });
 
         if (!user) throw new Error('Login failed');
 
-        // const checkPassword = await bcrypt.compare(
-        //   user.password as string,
-        //   hashedPassword
-        // );
+        const checkPassword: boolean = verifyPassword(
+          password,
+          user.password as string,
+          process.env.AUTH_SECRET
+        );
 
         // TODO : Delete
         // console.log('--------------------------------------');
-        // console.log(`${user.password} and ${hashedPassword}`);
+        // console.log(`${user.password} and\n${hashedPassword}`);
         // console.log('--------------------------------------');
-        const checkPassword = user.password === hashedPassword;
-        if (checkPassword) return user;
+        console.log({ checkPassword });
+        if (checkPassword) {
+          console.log('Login Successful');
+
+          return user;
+        }
 
         // TEMPORARY : Just for development
         const hashedInput = await bcrypt.hash(user.password as string, 10);

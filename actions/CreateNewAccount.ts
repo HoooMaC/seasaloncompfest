@@ -5,7 +5,8 @@ import { redirect } from 'next/navigation';
 import { RegisterSchema } from '@/schemas/AuthSchema';
 
 import { dbPrisma } from '@/lib/dbprisma';
-import { saltAndHash } from '@/utils/saltAndHash';
+import { hashPassword } from '@/utils/hash';
+import assert from 'assert';
 
 export default async function createNewAccount(
   values: zod.infer<typeof RegisterSchema>
@@ -27,7 +28,11 @@ export default async function createNewAccount(
   //   password,
   //   'generated password from register'
   // );
-  const pwHash = password;
+  assert(
+    process.env.AUTH_SECRET,
+    'Need to provide some AUTH_SECRET in' + ' environment variable'
+  );
+  const pwHash = hashPassword(password, process.env.AUTH_SECRET);
 
   try {
     const result = await dbPrisma.user.create({
