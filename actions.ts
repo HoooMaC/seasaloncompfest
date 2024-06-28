@@ -18,7 +18,7 @@ export async function addNewReview({
     },
   });
 
-  console.log({ result });
+  // console.log({ result });
 }
 
 export async function getAllReviews() {

@@ -41,7 +41,7 @@ export default {
           process.env.AUTH_SECRET
         );
 
-        console.log({ checkPassword });
+        // console.log({ checkPassword });
         if (checkPassword) {
           return user;
         } else {

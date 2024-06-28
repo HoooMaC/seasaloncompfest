@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { LogOut, ScrollText, Settings, User } from 'lucide-react';
 import { SignOutAction } from '@/actions/SignOutAction';
 import { Button } from '@/components/ui/button';
+import SignOutButton from '@/components/SignOutButton';
 
 const Sidebar = () => {
   return (
@@ -21,26 +22,10 @@ const Sidebar = () => {
         </Link>
       </div>
       <div className='flex flex-col gap-2'>
-        <Link href='/user/setting' className='flex gap-2'>
-          <Settings />
-          <span>Settings</span>
-        </Link>
-
-        {/*@ts-ignore*/}
-        <form action={SignOutAction}>
-          <Button
-            variant='outline'
-            className='text-md group w-full justify-start gap-2 border-none ps-0 font-normal hover:bg-transparent hover:text-destructive'
-            type='submit'
-          >
-            <LogOut
-              // color='white'
-              className='group-hover:text-destructive'
-              // size={18}
-            ></LogOut>
-            SignOut
-          </Button>
-        </form>
+        <SignOutButton className='justify-start border-none p-0'>
+          <LogOut />
+          SignOut
+        </SignOutButton>
       </div>
     </div>
   );

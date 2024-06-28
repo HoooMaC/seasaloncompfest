@@ -3,11 +3,10 @@ import Image from 'next/image';
 
 import styles from '@/components/Navbar.module.css';
 import Link from 'next/link';
-import React, { useLayoutEffect, useState } from 'react';
-import { signOut } from '@/auth';
+import React, { useState } from 'react';
 import { Button, buttonVariants } from '@/components/ui/button';
+import SignOutButton from '@/components/SignOutButton';
 import { User } from 'next-auth';
-import { SignOutAction } from '@/actions/SignOutAction';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,7 +16,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/utils/cn';
-import { LayoutDashboard, LogOut, UserIcon } from 'lucide-react';
+import { LayoutDashboard, LogInIcon, LogOut, UserIcon } from 'lucide-react';
 
 const components: { title: string; href: string; icon?: React.ReactNode }[] = [
   {
@@ -42,7 +41,7 @@ const Navbar = ({ user }: { user: User | undefined }) => {
         />
         <label
           htmlFor='menu'
-          className='relative z-10 flex size-16 scale-75 flex-col items-center justify-center gap-2 md:hidden'
+          className='relative z-10 flex size-16 scale-75 flex-col items-center justify-center gap-2 lg:hidden'
         >
           <input
             type='checkbox'
@@ -65,7 +64,7 @@ const Navbar = ({ user }: { user: User | undefined }) => {
           />
         </label>
         <ul
-          className={`absolute ${isNavbarOpen ? 'right-[0]' : 'right-[-100%]'} top-0 flex h-dvh w-[200px] flex-col gap-4 border-l-2 border-secondary bg-background px-8 pt-28 transition-all duration-200 md:relative md:h-full md:w-fit md:flex-row md:gap-4 md:border-0 md:p-0 lg:right-[unset]`}
+          className={`absolute ${isNavbarOpen ? 'right-[0]' : 'right-[-100%]'} top-0 flex h-dvh w-[200px] flex-col gap-4 border-l-2 border-secondary bg-background px-8 pt-28 transition-all duration-200 lg:relative lg:right-[unset] lg:h-full lg:w-fit lg:flex-row lg:gap-4 lg:border-0 lg:p-0`}
         >
           <li className={styles.list_item}>
             <Link href='#hero'>Home</Link>
@@ -82,8 +81,38 @@ const Navbar = ({ user }: { user: User | undefined }) => {
           <li className={styles.list_item}>
             <Link href='#book'>Book</Link>
           </li>
+          <div className='rounded border-t-2 border-gray-500/15 lg:hidden' />
+          {user ? (
+            <>
+              <li className={`${styles.list_item} lg:hidden`}>
+                <Link
+                  className={`w-full gap-2 ${buttonVariants({ variant: 'outline' })}`}
+                  href='/user'
+                >
+                  Dashboard
+                  <LayoutDashboard></LayoutDashboard>
+                </Link>
+              </li>
+              <li className={`${styles.list_item} lg:hidden`}>
+                <SignOutButton className='hover:bg-destructive/10'>
+                  SignOut
+                  <LogOut size={18}></LogOut>
+                </SignOutButton>
+              </li>
+            </>
+          ) : (
+            <li className={`${styles.list_item} lg:hidden`}>
+              <Link
+                className={`w-full gap-2 ${buttonVariants({ variant: 'outline' })}`}
+                href='/login'
+              >
+                Login
+                <LogInIcon></LogInIcon>
+              </Link>
+            </li>
+          )}
         </ul>
-        <div className='flex p-4 lg:p-0'>
+        <div className='flex hidden p-4 lg:block lg:p-0'>
           {user ? (
             <NavigationMenu>
               <NavigationMenuList>
@@ -109,26 +138,10 @@ const Navbar = ({ user }: { user: User | undefined }) => {
                         );
                       })}
                       <div className='border-gray mx-auto w-4/5 rounded-full border-t' />
-
-                      {/*@ts-ignore*/}
-                      <form action={SignOutAction}>
-                        <Button
-                          className='bg-transparent hover:bg-accent'
-                          type='submit'
-                          variant='outline'
-                        >
-                          <ListItem
-                            title={'Sign Out'}
-                            className={
-                              'flex w-full items-center justify-center' +
-                              ' text-black hover:bg-transparent' +
-                              ' gap-2 hover:text-black'
-                            }
-                          >
-                            <LogOut color='black' size={18}></LogOut>
-                          </ListItem>
-                        </Button>
-                      </form>
+                      <SignOutButton className='hover:bg-destructive/10'>
+                        SignOut
+                        <LogOut size={18}></LogOut>
+                      </SignOutButton>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>

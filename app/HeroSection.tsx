@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { SecondaryButton } from '@/components/Buttons';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
+import Link from 'next/link';
 
 const heroImage =
   '/images/view of various makeup brushes and beauty tools arranged neatly on a salon countertop.jpg';
@@ -26,9 +27,12 @@ const HeroSection = () => {
             Experience Beauty and Elegance Redefined
           </p>
           {/*<SecondaryButton>Explore</SecondaryButton>*/}
-          <Button variant='secondary' className='w-1/5 min-w-[100px]'>
-            Something
-          </Button>
+          <Link
+            href='/book'
+            className={`w-1/5 min-w-[100px] ${buttonVariants({ variant: 'secondary' })}`}
+          >
+            Make Reservation
+          </Link>
         </div>
       </div>
     </section>

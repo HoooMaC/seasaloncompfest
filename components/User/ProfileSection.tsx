@@ -12,7 +12,9 @@ const ProfileSection = async () => {
   // console.log({ session });
   assert(session !== null);
   assert(session.user !== undefined);
-  const user = await getUserbyId(session.user.id as string);
+  // TODO
+  // @ts-ignore
+  const user = await getUserbyId(session.userId);
   assert(user !== null);
 
   return (

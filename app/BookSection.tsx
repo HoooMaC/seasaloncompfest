@@ -1,7 +1,7 @@
 import React from 'react';
 import { SecondaryButton } from '@/components/Buttons';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 
 const BookSection = () => {
@@ -29,7 +29,8 @@ const BookSection = () => {
             </p>
             <Link
               // variant='default'
-              className='inline-flex w-fit min-w-[100px] items-center justify-center whitespace-nowrap rounded-md bg-primary p-4 text-sm font-medium text-background ring-offset-background'
+              className={`${buttonVariants({ variant: 'default' })} w-full max-lg:mx-auto sm:w-2/3 lg:w-1/2`}
+              // className='inline-flex w-fit min-w-[100px] items-center justify-center whitespace-nowrap rounded-md bg-primary p-4 text-sm font-medium text-background ring-offset-background'
               href='/book'
             >
               Book Now

@@ -1,12 +1,13 @@
 'use server';
 import * as zod from 'zod';
 
-import { redirect } from 'next/navigation';
 import { RegisterSchema } from '@/schemas/AuthSchema';
-
 import { dbPrisma } from '@/lib/dbprisma';
 import { hashPassword } from '@/utils/hash';
 import assert from 'assert';
+import { NextRequest, NextResponse } from 'next/server';
+import * as url from 'node:url';
+import { redirect } from 'next/navigation';
 
 export default async function createNewAccount(
   values: zod.infer<typeof RegisterSchema>
@@ -23,11 +24,6 @@ export default async function createNewAccount(
     return { response: { error: 'Email already used' } };
   }
 
-  // TODO Fix hashing problem
-  // const pwHash = await saltAndHash(
-  //   password,
-  //   'generated password from register'
-  // );
   assert(
     process.env.AUTH_SECRET,
     'Need to provide some AUTH_SECRET in' + ' environment variable'
@@ -42,9 +38,9 @@ export default async function createNewAccount(
         password: pwHash,
       },
     });
+    return { response: { success: 'Register success' } };
   } catch (error) {
-    console.error({ error });
-    throw error;
+    // console.error({ error });
+    return { response: { error: 'Something went wrong' } };
   }
-  return redirect('https://localhost:3000/');
 }

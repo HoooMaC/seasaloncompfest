@@ -15,10 +15,10 @@ const Footer = () => {
           height={200}
           // layout='responsive'
         />
-        <div className='flex justify-between gap-4'>
+        <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
           <div className={`${styles.footer_link} basis-[20%]`}>
             <p className='mb-1 font-bold'>About Us</p>
-            <ul>
+            <ul className='text-center md:text-left'>
               <li>
                 <a href='#hero'>Home</a>
               </li>
@@ -33,7 +33,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className={`${styles.footer_link} flex-col`}>
+          <div
+            className={`${styles.footer_link} flex-col text-center md:text-left`}
+          >
             <p className='mb-1 font-bold'>Contact Sea's Salon</p>
             <p>Phone Numbers:</p>
             <p>Thomas: 08123456789</p>

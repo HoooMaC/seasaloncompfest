@@ -5,6 +5,7 @@ import * as zod from 'zod';
 import { dbPrisma } from '@/lib/dbprisma';
 import { redirect } from 'next/navigation';
 import { Branch, Role } from '@prisma/client';
+import { calculateEndTime } from '@/lib/utils/time';
 
 export const newReservation = async (
   values: zod.infer<typeof BookingSchema>
@@ -33,7 +34,7 @@ export const newReservation = async (
       phone: phone,
       date: date,
       startTime: time,
-      endTime: time + service?.durationInMinute,
+      endTime: calculateEndTime(time, service?.durationInMinute || 0),
       customerId: customer?.id,
       serviceId: service?.id || '',
       branchId: branch?.id || '',

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { startTransition, useEffect, useState } from 'react';
 import { motion, useAnimate } from 'framer-motion';
 import {
   Dialog,
@@ -30,8 +30,12 @@ import * as zod from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import ReviewSchema from '@/schemas/ReviewSchema';
 import PenIcon from '@/components/icons/PenIcon';
+import createNewAccount from '@/actions/CreateNewAccount';
+import { NewReviewAction } from '@/actions/NewReviewAction';
+import { useRouter } from 'next/navigation';
 
 const NewReviewDialog = () => {
+  const router = useRouter();
   const [newRating, setNewRating] = useState<number>(5);
 
   const handleRatingChange = (newRating: number) => {
@@ -48,33 +52,12 @@ const NewReviewDialog = () => {
   });
 
   function onSubmit(values: zod.infer<typeof ReviewSchema>) {
-    const { name, message } = values;
-
-    async function sendData() {
-      try {
-        const response = await fetch('http://localhost:3000/api/review', {
-          method: 'POST',
-          body: JSON.stringify({
-            name: name,
-            message: message,
-            rating: newRating,
-          }),
-        });
-
-        if (!response.ok) {
-          throw new Error('Failed to add review');
-        }
-
-        // We keep it for debugging
-        // const data = await response.json();
-        // console.log(data);
-      } catch (error) {
-        console.error('Error adding review:', error);
-      }
-    }
-
-    sendData();
-
+    startTransition(() => {
+      NewReviewAction(values).then(data => {
+        // setResponse(data?.response);
+      });
+    });
+    // router.refresh();
     form.reset();
   }
 
@@ -144,7 +127,6 @@ const NewReviewDialog = () => {
             <DialogDescription>
               <Form {...form}>
                 <form
-                  action=''
                   onSubmit={form.handleSubmit(onSubmit)}
                   className='space-y-4'
                 >

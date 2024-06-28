@@ -18,7 +18,7 @@ import Link from 'next/link';
 
 const TransactionHistoryPage = async () => {
   const session = await auth();
-  console.log({ session });
+  // console.log({ session });
   // Need to get all the history section
   const allReservations = await dbPrisma.reservation.findMany({
     where: {
@@ -30,7 +30,7 @@ const TransactionHistoryPage = async () => {
       branch: true,
     },
   });
-  console.log(allReservations);
+  // console.log(allReservations);
   return (
     <>
       <CardHeader>

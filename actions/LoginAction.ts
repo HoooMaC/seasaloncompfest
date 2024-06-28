@@ -25,6 +25,8 @@ export const LoginAction = async (values: zod.infer<typeof LoginSchema>) => {
       switch (error.type) {
         case 'CredentialsSignin':
           return { response: { error: 'Invalid credentials' } };
+        case 'JWTSessionError':
+          return { response: { error: 'JWTSessionError' } };
         default:
           return { response: { error: 'Something went wrong' } };
       }

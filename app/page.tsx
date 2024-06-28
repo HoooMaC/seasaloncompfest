@@ -21,7 +21,7 @@ export default async function Home() {
         <ServicesSection />
         <GallerySection />
         <ReviewsSection />
-        <NewReviewDialog />
+        {user && <NewReviewDialog />}
         <BookSection />
       </main>
       <Footer />
