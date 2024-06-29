@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from 'react';
+import React, { useEffect, useState, useTransition } from 'react';
 import {
   Form,
   FormControl,
@@ -17,6 +17,7 @@ import * as zod from 'zod';
 import { LoginSchema } from '@/schemas/AuthSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { LoginAction } from '@/actions/LoginAction';
+import { useRouter } from 'next/navigation';
 
 interface Response {
   error?: string;
@@ -24,6 +25,7 @@ interface Response {
 }
 
 const LoginForm = () => {
+  const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [response, setResponse] = useState<Response | undefined>();
   const form = useForm<zod.infer<typeof LoginSchema>>({
@@ -33,6 +35,15 @@ const LoginForm = () => {
       password: undefined,
     },
   });
+
+  useEffect(() => {
+    if (response?.success) {
+      const timer = setTimeout(() => {
+        router.push('/login');
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [response?.success, router]);
 
   function onSubmit(values: zod.infer<typeof LoginSchema>) {
     // console.log({ values });

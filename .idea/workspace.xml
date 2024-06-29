@@ -8,41 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/auth/[...nextauth]/SignOut.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SignOutButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/time.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/CreateNewAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/CreateNewAccount.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/LoginAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/LoginAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/NewReservationAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/NewReservationAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/NewServiceAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/NewServiceAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/SignOutAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/SignOutAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/BookSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/BookSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/HeroSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/auth/[...nextauth]/singOut.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions/NewReviewAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/user/transactionHistory/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/transactionHistory/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NewReviewDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NewReviewDialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/User/ProfileSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/ProfileSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/User/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/Sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/admin/NewServiceDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin/NewServiceDialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/form/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/form/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/form/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/form/RegisterForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240614082821_init/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240615062231_second/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240615062954_third/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240617095747_auth/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240617095917_auth2/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240617101410_auth_role/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240617113651_auth_role_default/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20240619053043_auth_level4/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/migration_lock.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/ServiceSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/ServiceSchema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +125,9 @@
       <workItem from="1719400767233" duration="9138000" />
       <workItem from="1719493228647" duration="7225000" />
       <workItem from="1719545014415" duration="8372000" />
-      <workItem from="1719573842636" duration="6872000" />
+      <workItem from="1719573842636" duration="8975000" />
+      <workItem from="1719665992870" duration="21000" />
+      <workItem from="1719666468977" duration="15000" />
     </task>
     <servers />
   </component>
