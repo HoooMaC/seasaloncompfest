@@ -23,26 +23,26 @@ const ProfileSection = async () => {
         <User />
       </CardHeader>
       <CardContent className='space-y-4'>
-        <div className='flex items-center space-x-4 rounded-md border p-4'>
-          <h3 className='w-[150px] border-r-[1px] border-gray-500/50 font-medium'>
+        <div className='flex flex-grow-0 items-center space-x-4 rounded-md border p-4'>
+          <h3 className='border-r-[1px] border-gray-500/50 font-medium lg:w-[150px]'>
             Name
           </h3>
           <p className='w-full'>{user.name}</p>
         </div>
-        <div className='flex items-center space-x-4 rounded-md border p-4'>
-          <h3 className='w-[150px] border-r-[1px] border-gray-500/50 font-medium'>
+        <div className='flex flex-grow-0 items-center space-x-4 rounded-md border p-4'>
+          <h3 className='border-r-[1px] border-gray-500/50 font-medium lg:w-[150px]'>
             Email
           </h3>
           <p className='w-full'>{user.email}</p>
         </div>
-        <div className='flex items-center space-x-4 rounded-md border p-4'>
-          <h3 className='w-[150px] border-r-[1px] border-gray-500/50 font-medium'>
+        <div className='flex flex-grow-0 items-center space-x-4 rounded-md border p-4'>
+          <h3 className='border-r-[1px] border-gray-500/50 font-medium lg:w-[150px]'>
             Password
           </h3>
           <p className='w-full'>*****</p>
         </div>
-        <div className='flex items-center space-x-4 rounded-md border p-4'>
-          <h3 className='w-[150px] border-r-[1px] border-gray-500/50 font-medium'>
+        <div className='flex flex-grow-0 items-center space-x-4 rounded-md border p-4'>
+          <h3 className='border-r-[1px] border-gray-500/50 font-medium lg:w-[150px]'>
             Role
           </h3>
           <p className='w-full'>{user.role}</p>

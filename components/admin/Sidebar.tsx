@@ -6,14 +6,17 @@ import {
   Settings,
   ShieldPlus,
 } from 'lucide-react';
+import Sidebar, {
+  SidebarContent,
+  SidebarFooter,
+  SidebarHeader,
+} from '@/components/Sidebar';
 
-const Sidebar = () => {
+const AdminSidebar = () => {
   return (
-    <div className='shadow-3xl flex basis-1/5 flex-col justify-between rounded-2xl bg-secondary-200 p-8 text-white'>
-      <div>
-        <h1 className='text-5xl font-bold'>Sea</h1>
-      </div>
-      <div className='flex h-full flex-col items-start gap-3 pt-8'>
+    <Sidebar>
+      <SidebarHeader>Sea</SidebarHeader>
+      <SidebarContent>
         <Link href='/admin/services' className='flex gap-2'>
           <ScrollText />
           Manage Services
@@ -34,12 +37,20 @@ const Sidebar = () => {
             Manage Admin
           </Link>
         </div>
-      </div>
-      <Link href='/admin/setting' className='flex gap-2'>
-        <Settings />
-        Settings
-      </Link>
-    </div>
+      </SidebarContent>
+      <SidebarFooter>
+        <AdminSidebarFooter />
+      </SidebarFooter>
+    </Sidebar>
   );
 };
-export default Sidebar;
+export default AdminSidebar;
+
+const AdminSidebarFooter = () => {
+  return (
+    <Link href='/admin/setting' className='flex gap-2'>
+      <Settings />
+      Settings
+    </Link>
+  );
+};

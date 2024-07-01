@@ -2,6 +2,7 @@
 import Image from 'next/image';
 
 import styles from '@/components/Navbar.module.css';
+
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Button, buttonVariants } from '@/components/ui/button';
@@ -17,6 +18,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/utils/cn';
 import { LayoutDashboard, LogInIcon, LogOut, UserIcon } from 'lucide-react';
+import MenuToggle from '@/components/MenuToggle';
 
 const components: { title: string; href: string; icon?: React.ReactNode }[] = [
   {
@@ -39,30 +41,10 @@ const Navbar = ({ user }: { user: User | undefined }) => {
           height={200}
           layout='responsive'
         />
-        <label
-          htmlFor='menu'
-          className='relative z-10 flex size-16 scale-75 flex-col items-center justify-center gap-2 lg:hidden'
-        >
-          <input
-            type='checkbox'
-            className='peer/menu sr-only'
-            id='menu'
-            onChange={() => setIsNavbarOpen(prev => !prev)}
-            checked={isNavbarOpen}
-          />
-          <div
-            className={`${styles.bars_element} top-1/4 duration-100 peer-checked/menu:top-1/2 peer-checked/menu:opacity-0`}
-          />
-          <div
-            className={`${styles.bars_element} top-3/4 duration-100 peer-checked/menu:top-1/2 peer-checked/menu:opacity-0`}
-          />
-          <div
-            className={`${styles.bars_element} top-1/2 opacity-0 delay-100 duration-200 peer-checked/menu:rotate-45 peer-checked/menu:opacity-100`}
-          />
-          <div
-            className={`${styles.bars_element} top-1/2 delay-100 duration-200 peer-checked/menu:-rotate-45`}
-          />
-        </label>
+        <MenuToggle
+          value={isNavbarOpen}
+          onChange={() => setIsNavbarOpen(prev => !prev)}
+        />
         <ul
           className={`absolute ${isNavbarOpen ? 'right-[0]' : 'right-[-100%]'} top-0 flex h-dvh w-[200px] flex-col gap-4 border-l-2 border-secondary bg-background px-8 pt-28 transition-all duration-200 lg:relative lg:right-[unset] lg:h-full lg:w-fit lg:flex-row lg:gap-4 lg:border-0 lg:p-0`}
         >
