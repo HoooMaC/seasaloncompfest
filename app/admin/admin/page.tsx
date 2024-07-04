@@ -17,7 +17,7 @@ const ManageAdminPage = async () => {
   return (
     <>
       <CardHeader>
-        <CardTitle>Manage Admin</CardTitle>
+        <CardTitle className='max-md:mx-auto'>Manage Admin</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>

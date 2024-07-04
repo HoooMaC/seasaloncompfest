@@ -20,7 +20,7 @@ const ServicesPage = async () => {
   return (
     <>
       <CardHeader>
-        <CardTitle>Manage Service</CardTitle>
+        <CardTitle className='max-md:mx-auto'>Manage Service</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>

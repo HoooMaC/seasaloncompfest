@@ -17,7 +17,7 @@ const ReviewsPage = async () => {
   return (
     <>
       <CardHeader>
-        <CardTitle>Manage Reviews</CardTitle>
+        <CardTitle className='max-md:mx-auto'>Manage Reviews</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>

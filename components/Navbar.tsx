@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from '@/components/Navbar.module.css';
 
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, buttonVariants } from '@/components/ui/button';
 import SignOutButton from '@/components/SignOutButton';
 import { User } from 'next-auth';
@@ -17,7 +17,13 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/utils/cn';
-import { LayoutDashboard, LogInIcon, LogOut, UserIcon } from 'lucide-react';
+import {
+  LayoutDashboard,
+  LogInIcon,
+  LogOut,
+  Shield,
+  UserIcon,
+} from 'lucide-react';
 import MenuToggle from '@/components/MenuToggle';
 
 const components: { title: string; href: string; icon?: React.ReactNode }[] = [
@@ -66,6 +72,18 @@ const Navbar = ({ user }: { user: User | undefined }) => {
           <div className='rounded border-t-2 border-gray-500/15 lg:hidden' />
           {user ? (
             <>
+              {/*@ts-ignore*/}
+              {user.role === 'ADMIN' && (
+                <li className={`${styles.list_item} lg:hidden`}>
+                  <Link
+                    className={`w-full gap-2 ${buttonVariants({ variant: 'outline' })}`}
+                    href='/admin'
+                  >
+                    Admin
+                    <Shield size={18}></Shield>
+                  </Link>
+                </li>
+              )}
               <li className={`${styles.list_item} lg:hidden`}>
                 <Link
                   className={`w-full gap-2 ${buttonVariants({ variant: 'outline' })}`}
@@ -107,6 +125,16 @@ const Navbar = ({ user }: { user: User | undefined }) => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className='grid w-fit gap-3 p-4'>
+                      {/*@ts-ignore*/}
+                      {user.role === 'ADMIN' && (
+                        <ListItem
+                          title='Admin'
+                          className={`w-full gap-2 ${buttonVariants({ variant: 'outline' })}`}
+                          href='/Admin'
+                        >
+                          <Shield size={18}></Shield>
+                        </ListItem>
+                      )}
                       {components.map((item, index) => {
                         return (
                           <ListItem

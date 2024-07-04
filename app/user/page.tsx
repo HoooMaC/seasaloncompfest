@@ -5,7 +5,7 @@ const UserDashboard = () => {
   return (
     <>
       <CardHeader>
-        <CardTitle>Profile</CardTitle>
+        <CardTitle className='max-md:mx-auto'>Profile</CardTitle>
       </CardHeader>
       <ProfileSection />
     </>

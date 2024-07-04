@@ -8,20 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81f7495e-5376-4219-a301-ae000ad188df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/actions/MRPRegisterAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(temp)/experimental/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(temp)/mrp/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/MenuToggle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Sidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/form/MRPAccountForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/laraFetcher.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schemas/MRPRegisterSchema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/HeroSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/admin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/reviews/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/reviews/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/services/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/services/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/user/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/user/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/User/ProfileSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/ProfileSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/User/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/Sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/admin/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin/Sidebar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +140,8 @@
       <workItem from="1719668421758" duration="2488000" />
       <workItem from="1719718245809" duration="5812000" />
       <workItem from="1719731422802" duration="8413000" />
-      <workItem from="1719811791946" duration="9019000" />
+      <workItem from="1719811791946" duration="9053000" />
+      <workItem from="1720063396946" duration="3392000" />
     </task>
     <servers />
   </component>

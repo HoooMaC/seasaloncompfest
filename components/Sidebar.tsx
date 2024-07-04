@@ -25,10 +25,10 @@ const Sidebar = ({
     <>
       <div
         className={cn(
-          'shadow-3xl absolute flex-col justify-between md:relative' +
-            ' bg-secondary-200 p-4 text-white' +
-            ' md:flex md:rounded-2xl' +
-            ' border border-white lg:basis-1/5 lg:p-8',
+          'shadow-3xl absolute h-full flex-col justify-between md:relative' +
+            ' z-10 bg-secondary-200 p-4 text-white' +
+            ' md:flex' +
+            ' lg:basis-1/5 lg:p-8',
           className
         )}
       >
